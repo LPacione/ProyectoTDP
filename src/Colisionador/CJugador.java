@@ -9,7 +9,7 @@ public class CJugador extends Colisionador{
 		balazo.setVida(-2);
 	}
 	public void afectarEnemigoKami(EnemigoKami ek) {
-		ek.setVida(-50);
+		ek.setVida(-500);
 	}
 	public void afectarJugador(Player p) {}
 	public void afectarEnemigo(Enemigo e) {}

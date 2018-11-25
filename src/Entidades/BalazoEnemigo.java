@@ -22,7 +22,7 @@ public class BalazoEnemigo extends Balazo{
 		super(icon);
 		ia = new IABalaEnemigo();
 		dano= 5;
-		vida = 200;
+		vida = 100;
 		col = new CDisparoEnemigo(dano);
 	}
 

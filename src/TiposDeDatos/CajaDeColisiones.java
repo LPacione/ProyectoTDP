@@ -1,7 +1,7 @@
 package TiposDeDatos;
 
-public class CajaDeColisiones 
-{
+public class CajaDeColisiones {
+	
 	private Coords supizq;
 	private Coords diagonal;
 	

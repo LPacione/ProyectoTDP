@@ -2,6 +2,10 @@ package InterfazGrafica;
 
 import java.awt.Container;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 import javax.swing.*;
 
 import Datos.GameData;
@@ -44,10 +48,17 @@ public class PantallaInicio extends Pantalla {
 	private void playButton() {
 		play = new JButton();
 		frame.add(play);
-		play.setBounds(200, 200, 80, 25);
+		play.setBounds(350, 250, 80, 25);
 		play.setVisible(true);
 		play.setText("PLAY");
-		
+		play.addMouseListener(new MouseAdapter() {
+			 public void mouseClicked(MouseEvent e) {
+				 if (e.getButton() == MouseEvent.BUTTON1) {
+					 play.setVisible(false);
+					 play.setEnabled(false);
+				 }
+			 }
+		});
 	}
 	
 	public void addMostrable(Mostrador mostrable) {		
@@ -67,5 +78,7 @@ public class PantallaInicio extends Pantalla {
 	public void refresh() {
 		frame.repaint();
 	}
-
+	
+	
+	
 }

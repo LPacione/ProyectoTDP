@@ -25,8 +25,7 @@ public class Player extends Entidad {
 		inst = inst != null? inst : new Player(playerIcon);
 		return inst;
 	}
-
-
+	
 	private Discreta disparoControl;
 
 	protected Player(Icon icon) {
@@ -41,7 +40,8 @@ public class Player extends Entidad {
 
 	public void disparar() {
 		Balazo b = new BalazoPlayer(IconsManager.balazo);
-		b.cuerpo.setPosicion(cuerpo.getPosicion().sumar(new Coords(playerIcon.getIconWidth()/2- b.getMostrable().getIcon().getIconWidth()/2,-40)));
+		b.cuerpo.setPosicion(cuerpo.getPosicion().sumar(
+			new Coords(playerIcon.getIconWidth()/2 -b.getMostrable().getIcon().getIconWidth()/2,-40)));
 		AbsNivel n = LevelDirector.instancia().currentLevel();
 		n.addEntity(b);
 		ElConocedor.instancia().add(b);

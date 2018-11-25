@@ -11,16 +11,7 @@ import InterfazGrafica.Mostrador;
 public abstract class Entidad implements Refrescable {
 //ObjectStructure-Element
 	
-	
-	/*
-	 * Hacer el patron State en entidad para generalizar la IA
-	 * meter el onRefresh en entidad
-	 * generalizar mas todo
-	 * los puntajes y demas cosas buscar de meterlas en entidad
-	 * que cada entidad cambie de IA sin que nadie se entere, solo ellos.
-	 */
-	
-	public CuerpoRigido cuerpo;
+	protected CuerpoRigido cuerpo;
 	protected Mostrador mostrador;
 	protected IA ia;
 	protected int valor;
@@ -70,7 +61,6 @@ public abstract class Entidad implements Refrescable {
 		another.aceptar(col);
 	}
 
-	
 	public abstract void disparar();
 	
 }
