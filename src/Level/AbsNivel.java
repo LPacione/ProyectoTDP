@@ -120,12 +120,12 @@ public abstract class AbsNivel {//implementar runnable
 	public int getCantidadEntidades() {
 		return demasEntidades.size();
 	}
-	public final void addEntity(Entidad e) {
+	public void addEntity(Entidad e) {
 		toAddEnt.add(e);
 		PantallaJuego.getInstance().addMostrable(e.getMostrable());
 	}
 
-	public final void removeEntity(Entidad e) {
+	public void removeEntity(Entidad e) {
 		toRemoveEnt.remove(e);		
 		PantallaJuego.getInstance().removeMostrable(e.getMostrable()); 
 		demasEntidades.remove(e);

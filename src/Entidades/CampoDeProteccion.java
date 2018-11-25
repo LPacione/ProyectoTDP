@@ -15,7 +15,7 @@ public class CampoDeProteccion extends PowerUp{
 		super(icon);
 		valor=-10;
 		ia= new PowerUpIA();
-		col= new CCampoDeProteccion();
+	//	col= new CCampoDeProteccion();
 	}
 
 	public void activar() {

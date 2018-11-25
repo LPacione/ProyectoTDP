@@ -95,6 +95,7 @@ public class CrearNivel extends AbsNivel {
 	public boolean gane() {
 		boolean gane=false;
 		if(numeroNivel==5 && demasEntidades.isEmpty()) {
+			pantalla.borrarPantalla();
 			pantalla= PantallaW.getInstance();
 			gane=true;
 		}
@@ -104,6 +105,7 @@ public class CrearNivel extends AbsNivel {
 	public boolean perdi() {
 		boolean perdi=false;
 		if(player.getVida()<=0) {
+			pantalla.borrarPantalla();
 			pantalla= PantallaL.getInstance();
 			perdi=true;
 		}

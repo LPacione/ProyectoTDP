@@ -1,5 +1,6 @@
 package Level;
 
+import InterfazGrafica.Pantalla;
 import InterfazGrafica.PantallaInicio;
 import InterfazGrafica.PantallaJuego;
 import Entidades.*;

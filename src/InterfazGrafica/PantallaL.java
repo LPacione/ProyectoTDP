@@ -20,9 +20,6 @@ public class PantallaL extends Pantalla{
 	}
 
 
-	private JFrame frame;
-	private Container container;
-
 	private PantallaL() {	
 		inicializar();
 	}
@@ -59,6 +56,12 @@ public class PantallaL extends Pantalla{
 	public void run() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void borrarPantalla() {
+		frame.removeAll();
+		container.removeAll();
 	}
 
 

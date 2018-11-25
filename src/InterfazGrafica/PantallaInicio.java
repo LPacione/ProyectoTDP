@@ -15,8 +15,7 @@ public class PantallaInicio extends Pantalla {
 		return instancia;
 	}
 
-	private JFrame frame;
-	private Container container;
+	
 	private JButton play;
 
 	public PantallaInicio() {
@@ -68,4 +67,11 @@ public class PantallaInicio extends Pantalla {
 		frame.repaint();
 	}
 
+
+	public void borrarPantalla() {
+		frame.removeAll();
+		container.removeAll();
+	}
+
+	
 }

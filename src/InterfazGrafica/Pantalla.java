@@ -1,5 +1,6 @@
 package InterfazGrafica;
 
+import java.awt.Container;
 import java.awt.event.KeyListener;
 
 
@@ -10,6 +11,9 @@ import Datos.GameData;
 import Datos.IconsManager;
 
 public abstract class Pantalla implements Runnable{
+	
+	protected JFrame frame;
+	protected Container container;
 
 	protected abstract void inicializar() ;
 
@@ -22,5 +26,7 @@ public abstract class Pantalla implements Runnable{
 	public abstract void refresh();
 	
 	public abstract void run();
+	
+	public abstract void borrarPantalla();
 	
 }

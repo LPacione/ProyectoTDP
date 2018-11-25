@@ -11,7 +11,7 @@ public abstract class PowerUp extends Entidad{
 	
 	protected PowerUp(Icon icon) {
 		super(icon);	
-		col = new CPowerUp();
+	//	col = new CPowerUp();
 	}
 	
 	public abstract void activar();

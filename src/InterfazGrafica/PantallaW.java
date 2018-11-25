@@ -20,8 +20,6 @@ public class PantallaW extends Pantalla{
 	}
 
 
-	private JFrame frame;
-	private Container container;
 	//private LevelDirector leverDirector;
 
 	private PantallaW() {	
@@ -60,6 +58,12 @@ public class PantallaW extends Pantalla{
 	public void run() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void borrarPantalla() {
+		frame.removeAll();
+		container.removeAll();
 	}
 
 

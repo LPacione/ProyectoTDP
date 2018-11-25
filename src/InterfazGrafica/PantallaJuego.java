@@ -18,9 +18,6 @@ public class PantallaJuego extends Pantalla{
 	}
 
 
-	private JFrame frame;
-	private Container container;
-
 	private PantallaJuego() {	
 		run();
 	}
@@ -55,6 +52,12 @@ public class PantallaJuego extends Pantalla{
 
 	public void run() {
 		inicializar();
+	}
+
+	@Override
+	public void borrarPantalla() {
+		frame.removeAll();
+		container.removeAll();
 	}
 
 
