@@ -26,6 +26,6 @@ public class CajaDeColisiones
 	}
 	
 	public boolean Solapa(CajaDeColisiones otra) {
-		return supizq.sqrdistancia(otra.supizq) < diagonal.sqrdistancia(otra.diagonal)*2; // magic numb (pixeles hasta que desaparece)
+		return supizq.sqrdistancia(otra.supizq) < diagonal.sqrdistancia(otra.diagonal)*2; // Magic numb (pixeles hasta que desaparece)
 	}
 }

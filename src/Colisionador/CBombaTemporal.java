@@ -13,7 +13,6 @@ public class CBombaTemporal extends Colisionador{
 	}
 
 	public void afectarJugador(Player p) {
-		System.out.println("Disminuyo vida del jugador");
 		p.setVida(p.getVida()-damage);
 	}
 	

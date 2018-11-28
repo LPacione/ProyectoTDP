@@ -1,13 +1,15 @@
 package InterfazGrafica;
 
 import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import Datos.*;
 import Entrada.*;
+import Level.AbsNivel;
 import Level.LevelDirector;
 
 import javax.swing.*;
-import javax.swing.JLabel;
 
 public class PantallaJuego extends Pantalla{
 	
@@ -18,8 +20,10 @@ public class PantallaJuego extends Pantalla{
 	}
 
 
+	private JButton play;
+
 	private PantallaJuego() {	
-		run();
+		inicializar();
 	}
 
 	protected void inicializar() {
@@ -33,6 +37,9 @@ public class PantallaJuego extends Pantalla{
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);		
 	}
+	
+	
+	
 
 	public void addMostrable(Mostrador mostrable){
 		container.add(mostrable);
@@ -58,6 +65,8 @@ public class PantallaJuego extends Pantalla{
 	public void borrarPantalla() {
 		frame.removeAll();
 		container.removeAll();
+		frame.setVisible(false);
+		container.setVisible(false);
 	}
 
 

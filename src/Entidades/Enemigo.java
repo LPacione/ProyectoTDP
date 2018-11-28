@@ -40,18 +40,10 @@ public class Enemigo extends Entidad {
 	
 	public void disparar() {}
 	
-	public void dropearPW() {
-		/*	 generar un random
-		 *  	si es el numero elegido
-		 *  		crear el pw
-		 *  		agregarlo a la pantalla y a la lista de entidades
-		 */
-	}
-
 
 	@Override
 	public void colisionasteCon(Entidad another) {
-		// TODO Auto-generated method stub
+		another.aceptar(col);
 		
 	}
 	

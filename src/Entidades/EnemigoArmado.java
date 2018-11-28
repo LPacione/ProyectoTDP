@@ -66,7 +66,6 @@ public static Icon armadoIcon = new ImageIcon(Pictures.naveArmada);
 		b.cuerpo.setPosicion(cuerpo.getPosicion().sumar(new Coords(armadoIcon.getIconWidth()/2- b.getMostrable().getIcon().getIconWidth()/2,40)));
 		AbsNivel n = LevelDirector.instancia().currentLevel();
 		n.addEntity(b);
-		ElConocedor.instancia().add(b);
 	}
 	
 	
@@ -111,8 +110,8 @@ public static Icon armadoIcon = new ImageIcon(Pictures.naveArmada);
 					powerUp= new CampoDeProteccion(IconsManager.campoDeProteccion);
 			if(powerUp!=null) {
 				powerUp.cuerpo.setPosicion(cuerpo.getPosicion());
-				//n.addEntity(powerUp);
-				//ElConocedor.instancia().add(powerUp);
+				n.addEntity(powerUp);
+				
 			}
 		}
 	}

@@ -2,14 +2,14 @@ package Level;
 
 import Datos.GameData;
 import Datos.IconsManager;
-import Entidades.ElConocedor;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
 import Entidades.EnemigoKami;
-import Entidades.Entidad;
 import Entidades.Obstaculo;
-import Entrada.Discreta;
-import InterfazGrafica.*;
+import InterfazGrafica.PantallaInicio;
+import InterfazGrafica.PantallaJuego;
+import InterfazGrafica.PantallaL;
+import InterfazGrafica.PantallaW;
 import TiposDeDatos.Coords;
 
 public class CrearNivel extends AbsNivel {
@@ -29,13 +29,11 @@ public class CrearNivel extends AbsNivel {
 			cantEnemsA= 2*i;
 			controlarVida();
 		}	
-		else {
-			gane();
-		}
 	}
 
 	public void crear() {
 		int ancho = GameData.WindowSize.width;
+		
 		//ENEMIGOS 1
 		int cantXNivel= cantEnems/3;
 		int n=0;
@@ -45,20 +43,19 @@ public class CrearNivel extends AbsNivel {
 			demasEntidades.add(enem);
 			Coords c = new Coords(ancho*i/(cantEnems+1),100*nivelAltura);
 			enem.getCuerpo().setPosicion(c);
-			ElConocedor.instancia().add(enem);
 			n++;
 			if(n==cantXNivel) {
 				n=0;
 				nivelAltura++;
 			}
 		}
+		
 		//ENEMIGOS KAMI
 		for(int i=1; i<=cantEnemsK;i++) {
 			EnemigoKami enemK = new EnemigoKami(EnemigoKami.ic2);
 			demasEntidades.add(enemK);
 			Coords c = new Coords(ancho*i/(cantEnemsK+1),350);
 			enemK.getCuerpo().setPosicion(c);
-			ElConocedor.instancia().add(enemK);
 		}
 		//ENEMIGOS ARMADOS
 		for(int i=1; i<=cantEnemsA; i++) {
@@ -66,7 +63,6 @@ public class CrearNivel extends AbsNivel {
 			demasEntidades.add(enemA);
 			Coords c= new Coords(ancho*i*2/(cantEnems+1),50);
 			enemA.getCuerpo().setPosicion(c);
-			ElConocedor.instancia().add(enemA);
 		}
 		//OBSTACULOS
 		for(int i=1; i<=cantObs; i++) {
@@ -86,7 +82,7 @@ public class CrearNivel extends AbsNivel {
 
 
 	public void iniciar() {
-	//	pantalla = PantallaInicio.getInstance();
+		pantalla = PantallaJuego.getInstance();
 	}
 	public boolean limpiar() {
 		return false;
@@ -94,7 +90,7 @@ public class CrearNivel extends AbsNivel {
 
 	public boolean gane() {
 		boolean gane=false;
-		if(numeroNivel==5 && demasEntidades.isEmpty()) {
+		if(numeroNivel==5 && demasEntidades.size()==1) {
 			pantalla.borrarPantalla();
 			pantalla= PantallaW.getInstance();
 			gane=true;

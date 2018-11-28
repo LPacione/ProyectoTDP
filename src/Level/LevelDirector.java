@@ -34,8 +34,6 @@ public class LevelDirector implements Runnable{
 			nivel.refrescarTodo();
 			time2 = System.nanoTime();
 			esperar(tiempoDeFrame-(time2-time));
-//			PantallaInicio.getInstance().refresh();
-			PantallaJuego.getInstance().refresh();
 			controlarNivel();
 		}	
 	}
@@ -47,9 +45,9 @@ public class LevelDirector implements Runnable{
 	}
 	
 	private void controlarNivel() {
-		//System.out.println("Cantidad de entidades: "+nivel.getCantidadEntidades());
+	//	System.out.println("Cantidad de entidades: "+nivel.getCantidadEntidades());
 
-		if(nivel.getCantidadEntidades()==0) {
+		if(nivel.getCantidadEntidades()==1) {
 			cambiarNivel();
 		}
 	}

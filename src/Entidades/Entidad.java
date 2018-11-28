@@ -7,6 +7,7 @@ import Colisionador.Colisionador;
 
 import IA.IA;
 import InterfazGrafica.Mostrador;
+import InterfazGrafica.PantallaJuego;
 
 public abstract class Entidad implements Refrescable {
 //ObjectStructure-Element
@@ -30,7 +31,6 @@ public abstract class Entidad implements Refrescable {
 	protected Entidad(Icon icon) {
 		cuerpo = new CuerpoRigido(icon.getIconWidth(),icon.getIconHeight());
 		mostrador = new Mostrador(icon);
-		
 	}
 	
 	public abstract void onRefresh();
@@ -51,6 +51,9 @@ public abstract class Entidad implements Refrescable {
 		vida=f;
 	}
 	
+	public void eliminar() {
+		PantallaJuego.getInstance().removeMostrable(this.getMostrable());
+	}
 	
 	public void refresh() {
 		int w,h,x,y;

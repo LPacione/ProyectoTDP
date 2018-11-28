@@ -55,7 +55,6 @@ public class PantallaL extends Pantalla{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override

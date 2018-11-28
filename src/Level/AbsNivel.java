@@ -15,18 +15,17 @@ import Entidades.*;
 import Entrada.Discreta;
 import InterfazGrafica.*;
 
-public abstract class AbsNivel {//implementar runnable
+public abstract class AbsNivel {//Implementar runnable
 
 	protected Pantalla pantalla;
 
 	protected Player player;
 	protected Mostrador vida;
+	
 	protected Collection<Entidad> demasEntidades;
+	private Collection<Entidad> toRemoveEnt;
+	private Collection<Entidad> toAddEnt;
 
-	private Queue<Entidad> toRemoveEnt;
-	private Queue<Entidad> toAddEnt;
-
-	private Discreta eliminaEnemigosConEnter;
 
 
 
@@ -41,43 +40,63 @@ public abstract class AbsNivel {//implementar runnable
 	protected AbsNivel(){
 		demasEntidades = new ArrayList<>();
 		player = Player.getInstance();
-		pantalla = PantallaJuego.getInstance();
 		vida= new Mostrador(IconsManager.v1);
 		vida.setBounds(700, 500, 100, 100);
 		toRemoveEnt = new LinkedList<>();
 		toAddEnt= new LinkedList<>();
-		eliminaEnemigosConEnter = new Discreta(this::eliminaTodosLosEnemies, Discreta.enter);	
+		demasEntidades.add(player);
 	}
 
 	public void eliminaTodosLosEnemies(){
-	//	System.out.println("Entro a eliminar todas las enemies");
-		toRemoveEnt.addAll(demasEntidades);
+		toRemoveEnt.addAll(toRemoveEnt);
 	}
 
+	public void setPantalla(Pantalla p) {
+		pantalla=p;
+	}
+	
+	public void inicializar() {
+		pantalla.run();
+	}
 
 	public void agregarTodo() {
 		pantalla.addMostrable(player.getMostrable());
-		demasEntidades.forEach(e -> pantalla.addMostrable(e.getMostrable()));		
-		demasEntidades.forEach(ElConocedor.instancia()::add);
-		ElConocedor.instancia().add(player);	
+		demasEntidades.forEach(e -> pantalla.addMostrable(e.getMostrable()));
 		refrescarTodo();
 	}
 
 	public void refrescarTodo() {
 		player.refresh();
-		demasEntidades.forEach(e->e.refresh());	
-		ElConocedor.instancia().refresh();
-		while(!toRemoveEnt.isEmpty()){
-			Entidad e = toRemoveEnt.remove();
-			player.sumarPuntaje(e);
+		demasEntidades.forEach(e->e.refresh());
+		checkColisiones();
+		for (Entidad e: toRemoveEnt) {
 			demasEntidades.remove(e);
 			PantallaJuego.getInstance().removeMostrable(e.getMostrable());
 		}
-		while(!toAddEnt.isEmpty()){
-			Entidad e = toAddEnt.remove();
+		toRemoveEnt.removeAll(toRemoveEnt);
+		for (Entidad e: toAddEnt) {
 			demasEntidades.add(e);
-		}		
+		}
+		toAddEnt.removeAll(toAddEnt);
 	}	
+	
+	protected void checkColisiones() {
+		for(Entidad e : demasEntidades) {
+			if(e.getVida()<=0) {
+				toRemoveEnt.add(e);
+				player.sumarPuntaje(e);
+				System.out.println("Puntaje: "+player.getPuntaje());
+			}
+			if(e.getCuerpo().getPosicion().getX()>600 && e.getCuerpo().getPosicion().getY()>800) {
+				toRemoveEnt.add(e);			
+			}
+			for(Entidad e1: demasEntidades) {
+				if(e!=e1 && e.getCuerpo().CollidesWith(e1.getCuerpo())) {
+					e.colisionasteCon(e1);
+				}
+			}
+		}
+	}
 
 
 	protected void controlarVida() {

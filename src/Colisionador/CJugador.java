@@ -7,6 +7,7 @@ public class CJugador extends Colisionador{
 	
 	public void afectarDisparo(Balazo balazo) {
 		balazo.setVida(-2);
+		System.out.println("Balazo vs Player");
 	}
 	public void afectarEnemigoKami(EnemigoKami ek) {
 		ek.setVida(-50);

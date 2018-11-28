@@ -45,7 +45,6 @@ public class Player extends Entidad {
 		Balazo b = new BalazoPlayer(IconsManager.balazo,danoBala);
 		b.cuerpo.setPosicion(cuerpo.getPosicion().sumar(new Coords(playerIcon.getIconWidth()/2- b.getMostrable().getIcon().getIconWidth()/2,-40)));
 		n.addEntity(b);
-		ElConocedor.instancia().add(b);
 	}
 
 	public void onRefresh() {

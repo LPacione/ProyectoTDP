@@ -21,9 +21,6 @@ public class CDisparoPlayer extends Colisionador {
 	}
 	public void afectarEnemigo(Enemigo e) {
 		e.setVida(e.getVida()-damage);	
-//		if ( e.getVida() <= 0) {
-//			e.dropearPW();
-//		}
 	}
 	public void afectarEnemigoKami(EnemigoKami ek) {
 		ek.setVida(ek.getVida()-damage);
