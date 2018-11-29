@@ -53,7 +53,6 @@ public class Player extends Entidad {
 
 	public void sumarPuntaje(Entidad e) {
 		puntaje+=e.getValor();
-		System.out.println(puntaje);
 	}
 
 	public int getPuntaje() {

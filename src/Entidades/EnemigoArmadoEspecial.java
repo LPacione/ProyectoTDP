@@ -2,12 +2,11 @@ package Entidades;
 
 import java.util.Random;
 
-import Colisionador.CEnemigoArmado;
+import Colisionador.CEnemigoArmadoEspecial;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import IA.IAArmado;
 import IA.IABuscador;
-import IA.IAMareado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import TiposDeDatos.Grafico;
@@ -17,7 +16,7 @@ public class EnemigoArmadoEspecial extends Enemigo{
 	
 	//private float velocidad = 2f;
 	protected int danoBala;
-	protected CEnemigoArmado col;
+	protected CEnemigoArmadoEspecial col;
 	private boolean cambieDeIA = false;
 
 	
@@ -28,7 +27,7 @@ public class EnemigoArmadoEspecial extends Enemigo{
 		damage=1000;
 		danoBala=10;
 		vida = 200;
-		col = new CEnemigoArmado(damage);
+		col = new CEnemigoArmadoEspecial(damage);
 	}
 	
 	protected void iniciarGraficamente() {
@@ -101,7 +100,7 @@ public class EnemigoArmadoEspecial extends Enemigo{
 	public void resetearEntidad() {
 		ia = new IAArmado();
 	}
-
+	
 }
 
 	

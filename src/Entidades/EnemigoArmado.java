@@ -6,7 +6,6 @@ import Colisionador.CEnemigoArmado;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import IA.IAArmado;
-import IA.IAMareado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import TiposDeDatos.Grafico;
@@ -86,10 +85,10 @@ public class EnemigoArmado extends Enemigo{
 		return "Armado";
 	}
 	
+
 	public void resetearEntidad() {
 		ia = new IAArmado();
 	}
-
 }
 
 	

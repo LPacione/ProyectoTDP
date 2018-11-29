@@ -1,13 +1,10 @@
 package Entidades;
 
-import java.util.Random;
-
 import Colisionador.CEnemigoKami;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import IA.IAMareado;
 import InterfazGrafica.Mostrador;
-import Level.Nivel;
 import TiposDeDatos.Grafico;
 
 public class EnemigoKami extends Enemigo{
@@ -50,5 +47,5 @@ public class EnemigoKami extends Enemigo{
 	public void resetearEntidad() {
 		ia = new IAMareado();
 	}
-
+	
 }
