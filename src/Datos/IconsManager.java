@@ -7,7 +7,9 @@ import Animation.Pictures;
 public class IconsManager {
 	public static Icon enemigo= new ImageIcon(Pictures.enemigo1);
 	public static Icon enemigoArmado= new ImageIcon(Pictures.naveArmada);
+	public static Icon enemigoArmadoEspecial= new ImageIcon(Pictures.naveArmadaEspecial);
 	public static Icon enemigoKami= new ImageIcon(Pictures.enemigo2);
+	public static Icon enemigoKami2= new ImageIcon(Pictures.enemigo3);
 	public static Icon player= new ImageIcon(Pictures.player);
 	public static Icon obstaculo= new ImageIcon(Pictures.obstaculos);
 	public static Icon fondo = new ImageIcon(Pictures.fondo);
