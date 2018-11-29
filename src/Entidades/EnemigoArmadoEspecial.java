@@ -5,10 +5,10 @@ import java.util.Random;
 import Colisionador.CEnemigoArmado;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IAArmado;
+import IA.IABuscador;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
-import Refactoring.IAArmado;
-import Refactoring.IABuscador;
 import TiposDeDatos.Grafico;
 
 public class EnemigoArmadoEspecial extends Enemigo{

@@ -3,9 +3,8 @@ package Entidades;
 import Colisionador.CEnemigoKami;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IABuscador;
 import InterfazGrafica.Mostrador;
-import Refactoring.IABuscador;
-import Refactoring.IAMareado;
 import TiposDeDatos.Grafico;
 
 public class EnemigoKami2 extends Enemigo{
