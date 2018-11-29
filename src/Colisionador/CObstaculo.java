@@ -7,7 +7,7 @@ import Entidades.EnemigoArmado;
 import Entidades.EnemigoKami;
 import Entidades.Obstaculo;
 import Entidades.Player;
-import Entidades.PowerUp;
+import Entidades.PowerUp.PowerUp;
 
 public class CObstaculo extends Colisionador{
 

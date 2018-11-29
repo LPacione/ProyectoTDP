@@ -1,32 +1,35 @@
-package Entidades;
+package Entidades.PowerUp;
 
 import Colisionador.CPowerUp;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import TiposDeDatos.Grafico;
 
-public class BombaTemporal extends PowerUp{
+public class SumaVida extends PowerUp{
 
-	protected float velocidad= 1f;
+
+	protected float velocidad = 1f;
 	protected CPowerUp col;
 	
-	protected BombaTemporal() {
+	public SumaVida()  {
 		super();
-		valor=-10;
 	}
 	
+
 	protected void iniciarGraficamente() {
 		
-		grafico = new Grafico(IconsManager.bombaTemporal);
+		grafico = new Grafico(IconsManager.sumaVida);
 		
 		mostrador = new Mostrador(grafico.getIcon());
 	}
-
+	
 	public void activar() {
-		// TODO Auto-generated method stub
-		
+		p.setVida(p.getVida()+50);
 	}
-
-	public void actualizarEntidad() {}
+	
+	public void actualizarEntidad() {
+		mover();
+	}
+	
 
 }

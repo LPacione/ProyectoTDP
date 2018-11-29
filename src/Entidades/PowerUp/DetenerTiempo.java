@@ -1,7 +1,8 @@
-package Entidades;
+package Entidades.PowerUp;
 
 import Colisionador.CPowerUp;
 import Datos.IconsManager;
+import Entidades.Entidad;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import TiposDeDatos.Grafico;
@@ -11,7 +12,7 @@ public class DetenerTiempo extends PowerUp{
 	protected float velocidad= 1f;
 	protected CPowerUp col;
 	
-	protected DetenerTiempo() {
+	public DetenerTiempo() {
 		super();
 		valor=-10;
 	}
@@ -39,6 +40,7 @@ public class DetenerTiempo extends PowerUp{
 			for(Entidad e : n.getEntidades()) {
 				if(e!=p) {
 					e.resetearEntidad();
+					mover();
 				}
 			}
 		}

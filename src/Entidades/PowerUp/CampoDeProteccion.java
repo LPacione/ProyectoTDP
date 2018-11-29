@@ -1,32 +1,29 @@
-package Entidades;
+package Entidades.PowerUp;
 
 import Colisionador.CPowerUp;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import TiposDeDatos.Grafico;
 
-public class SuperMisil extends PowerUp{
+public class CampoDeProteccion extends PowerUp{
 
-	protected float velocidad = 1f;
+	protected float velocidad= 1f;
 	protected CPowerUp col;
 	
-	protected SuperMisil() {
+	public CampoDeProteccion() {
 		super();
-		valor=-20;
+		valor=-10;
 	}
-
+	
 	protected void iniciarGraficamente() {
 		
-		grafico = new Grafico(IconsManager.superMisil);
+		grafico = new Grafico(IconsManager.campoDeProteccion);
 		
 		mostrador = new Mostrador(grafico.getIcon());
 	}
-
-
 	public void activar() {
-		p.setSuperMisil();
 	}
-
-	protected void actualizarEntidad() {}
-
+	
+	public void actualizarEntidad() {}
+	
 }

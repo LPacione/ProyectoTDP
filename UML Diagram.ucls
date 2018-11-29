@@ -2,16 +2,7 @@
 <class-diagram version="1.2.2" icons="true" automaticImage="JPEG" always-add-relationships="false" 
   generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
   router="FAN">  
-  <class id="1" language="java" name="Level.CrearNivel" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Level/CrearNivel.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="277" y="2877"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="2" language="java" name="Entidades.Player" project="ProyectoTDP" 
+  <class id="1" language="java" name="Entidades.Player" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/Player.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2118" y="1435"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -20,7 +11,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="TiposDeDatos.Coords" project="ProyectoTDP" 
+  <class id="2" language="java" name="TiposDeDatos.Coords" project="ProyectoTDP" 
     file="/ProyectoTDP/src/TiposDeDatos/Coords.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="927" y="1102"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -29,34 +20,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="Entrada.Discreta" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Entrada/Discreta.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="725" y="2902"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="Entidades.SumaVidaPU" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Entidades/SumaVidaPU.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="4141" y="1329"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="IA.KamiIA2" project="ProyectoTDP" file="/ProyectoTDP/src/IA/KamiIA2.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2860" y="2731"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="7" language="java" name="Entidades.Refrescable" project="ProyectoTDP" 
+  <interface id="3" language="java" name="Entidades.Refrescable" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/Refrescable.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2462" y="760"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -65,7 +29,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="8" language="java" name="Entidades.Entidad" project="ProyectoTDP" 
+  <class id="4" language="java" name="Entidades.Entidad" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/Entidad.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2292" y="990"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -74,61 +38,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="IA.KamiIA1" project="ProyectoTDP" file="/ProyectoTDP/src/IA/KamiIA1.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2040" y="2740"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="Entidades.SacaVidaPU" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Entidades/SacaVidaPU.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="4145" y="1747"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="11" language="java" name="IA.ArmadoIA" project="ProyectoTDP" file="/ProyectoTDP/src/IA/ArmadoIA.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2245" y="2731"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="IA.IABalaPlayer" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/IA/IABalaPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2655" y="2704"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="13" language="java" name="IA.DummyIA" project="ProyectoTDP" file="/ProyectoTDP/src/IA/DummyIA.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2450" y="2731"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="14" language="java" name="IA.IA" project="ProyectoTDP" file="/ProyectoTDP/src/IA/IA.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2434" y="2408"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="15" language="java" name="TiposDeDatos.CuerpoRigido" project="ProyectoTDP" 
+  <class id="5" language="java" name="TiposDeDatos.CuerpoRigido" project="ProyectoTDP" 
     file="/ProyectoTDP/src/TiposDeDatos/CuerpoRigido.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="937" y="560"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -137,16 +47,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="Entidades.SacaDanoPU" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Entidades/SacaDanoPU.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="4141" y="1119"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="17" language="java" name="Entidades.BalazoPlayer" project="ProyectoTDP" 
+  <class id="6" language="java" name="Entidades.BalazoPlayer" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/BalazoPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2762" y="867"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -155,7 +56,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="Colisionador.CObstaculo" project="ProyectoTDP" 
+  <class id="7" language="java" name="Colisionador.CObstaculo" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CObstaculo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2481" y="238"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -164,7 +65,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="Colisionador.CDisparoEnemigo" project="ProyectoTDP" 
+  <class id="8" language="java" name="Colisionador.CDisparoEnemigo" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CDisparoEnemigo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3319" y="278"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -173,16 +74,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="20" language="java" name="Entidades.SumaDanoPU" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Entidades/SumaDanoPU.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="4141" y="1541"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="21" language="java" name="Entidades.EnemigoArmado" project="ProyectoTDP" 
+  <class id="9" language="java" name="Entidades.EnemigoArmado" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/EnemigoArmado.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3394" y="702"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -191,16 +83,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="22" language="java" name="IA.ObsIA" project="ProyectoTDP" file="/ProyectoTDP/src/IA/ObsIA.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="3065" y="2731"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="23" language="java" name="TiposDeDatos.CajaDeColisiones" project="ProyectoTDP" 
+  <class id="10" language="java" name="TiposDeDatos.CajaDeColisiones" project="ProyectoTDP" 
     file="/ProyectoTDP/src/TiposDeDatos/CajaDeColisiones.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="742" y="816"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -209,7 +92,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="24" language="java" name="Colisionador.CEnemigoKami" project="ProyectoTDP" 
+  <class id="11" language="java" name="Colisionador.CEnemigoKami" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CEnemigoKami.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1955" y="283"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -218,7 +101,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="25" language="java" name="Entrada.Teclado" project="ProyectoTDP" 
+  <class id="12" language="java" name="Entrada.Teclado" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entrada/Teclado.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="902" y="2899"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -227,7 +110,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="26" language="java" name="Colisionador.CDisparoPlayer" project="ProyectoTDP" 
+  <class id="13" language="java" name="Colisionador.CDisparoPlayer" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CDisparoPlayer.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2720" y="283"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -236,7 +119,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="27" language="java" name="Entidades.Obstaculo" project="ProyectoTDP" 
+  <class id="14" language="java" name="Entidades.Obstaculo" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/Obstaculo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2530" y="1417"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -245,16 +128,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="28" language="java" name="IA.PseudoIA" project="ProyectoTDP" file="/ProyectoTDP/src/IA/PseudoIA.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="3270" y="2713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="29" language="java" name="Entidades.BalazoEnemigo" project="ProyectoTDP" 
+  <class id="15" language="java" name="Entidades.BalazoEnemigo" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/BalazoEnemigo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3012" y="1392"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -263,7 +137,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="30" language="java" name="Colisionador.Colisionador" project="ProyectoTDP" 
+  <class id="16" language="java" name="Colisionador.Colisionador" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/Colisionador.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2620" y="-428"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -272,16 +146,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="31" language="java" name="IA.IABalaEnemigo" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/IA/IABalaEnemigo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1835" y="2704"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="32" language="java" name="Entidades.EnemigoKami" project="ProyectoTDP" 
+  <class id="17" language="java" name="Entidades.EnemigoKami" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/EnemigoKami.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3562" y="1085"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -290,16 +155,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="33" language="java" name="IA.FollowIA" project="ProyectoTDP" file="/ProyectoTDP/src/IA/FollowIA.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1630" y="2713"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="34" language="java" name="Entidades.Enemigo" project="ProyectoTDP" 
+  <class id="18" language="java" name="Entidades.Enemigo" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/Enemigo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3290" y="1081"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -308,7 +164,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="35" language="java" name="Colisionador.CEnemigo" project="ProyectoTDP" 
+  <class id="19" language="java" name="Colisionador.CEnemigo" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CEnemigo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3605" y="278"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -317,7 +173,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="36" language="java" name="Entidades.Balazo" project="ProyectoTDP" 
+  <class id="20" language="java" name="Entidades.Balazo" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Entidades/Balazo.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="207" width="174" x="2692" y="1296"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -326,25 +182,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="37" language="java" name="Entidades.ElConocedor" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Entidades/ElConocedor.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2294" y="627"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="38" language="java" name="Level.AbsNivel" project="ProyectoTDP" file="/ProyectoTDP/src/Level/AbsNivel.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="316" y="2468"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="39" language="java" name="Colisionador.CJugador" project="ProyectoTDP" 
+  <class id="21" language="java" name="Colisionador.CJugador" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CJugador.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1660" y="283"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -353,8 +191,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="40" language="java" name="Entidades.PowerUp" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Entidades/PowerUp.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="22" language="java" name="Entidades.PowerUp.PowerUp" project="ProyectoTDP" 
+    file="/ProyectoTDP/src/Entidades/PowerUp/PowerUp.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3856" y="1405"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -362,7 +200,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="41" language="java" name="Colisionador.CPowerUp" project="ProyectoTDP" 
+  <class id="23" language="java" name="Colisionador.CPowerUp" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CPowerUp.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="2224" y="287"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -371,16 +209,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="42" language="java" name="Level.LevelDirector" project="ProyectoTDP" 
-    file="/ProyectoTDP/src/Level/LevelDirector.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="286" y="2103"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="43" language="java" name="Colisionador.CEnemigoArmado" project="ProyectoTDP" 
+  <class id="24" language="java" name="Colisionador.CEnemigoArmado" project="ProyectoTDP" 
     file="/ProyectoTDP/src/Colisionador/CEnemigoArmado.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="3000" y="292"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -389,359 +218,188 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="44">    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="45" name="eliminaEnemigosConEnter"/>      
-      <multiplicity id="46" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="47">    
-    <end type="SOURCE" refId="26"/>    
-    <end type="TARGET" refId="30"/>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="20"/>  
   </generalization>  
-  <generalization id="48">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="40"/>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <generalization id="49">    
-    <end type="SOURCE" refId="36"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="50">    
-    <end type="SOURCE" refId="32"/>    
-    <end type="TARGET" refId="34"/>  
-  </generalization>  
-  <association id="51">    
-    <end type="SOURCE" refId="28" navigable="false">      
-      <attribute id="52" name="teclado"/>      
-      <multiplicity id="53" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="25" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="54">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="55">    
-    <end type="SOURCE" refId="19"/>    
-    <end type="TARGET" refId="30"/>  
-  </generalization>  
-  <association id="56">    
-    <end type="SOURCE" refId="36" navigable="false">      
-      <attribute id="57" name="ia"/>      
-      <multiplicity id="58" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="59">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="60" name="disparoControl"/>      
-      <multiplicity id="61" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="62">    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="63" name="supizq"/>      
-      <multiplicity id="64" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="65">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <realization id="66">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <association id="67">    
-    <end type="SOURCE" refId="29" navigable="false">      
-      <attribute id="68" name="col"/>      
-      <multiplicity id="69" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="19" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="70">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="71" name="inst"/>      
-      <multiplicity id="72" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="73">    
-    <end type="SOURCE" refId="16"/>    
-    <end type="TARGET" refId="40"/>  
-  </generalization>  
-  <association id="74">    
-    <bendpoint x="1148" y="1296"/>    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="75" name="demasEntidades"/>      
-      <multiplicity id="76" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="77">    
-    <end type="SOURCE" refId="43"/>    
-    <end type="TARGET" refId="30"/>  
-  </generalization>  
-  <generalization id="78">    
-    <end type="SOURCE" refId="34"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="79">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="38"/>  
-  </generalization>  
-  <realization id="80">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="81">    
-    <end type="SOURCE" refId="17" navigable="false">      
-      <attribute id="82" name="col"/>      
-      <multiplicity id="83" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="26" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="84">    
-    <end type="SOURCE" refId="42" navigable="false">      
-      <attribute id="85" name="instan"/>      
-      <multiplicity id="86" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="42" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="87">    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="88" name="entidades"/>      
-      <multiplicity id="89" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="90">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <generalization id="91">    
-    <end type="SOURCE" refId="35"/>    
-    <end type="TARGET" refId="30"/>  
-  </generalization>  
-  <generalization id="92">    
-    <end type="SOURCE" refId="41"/>    
-    <end type="TARGET" refId="30"/>  
-  </generalization>  
-  <association id="93">    
-    <end type="SOURCE" refId="33" navigable="false">      
-      <attribute id="94" name="p"/>      
-      <multiplicity id="95" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="96">    
-    <bendpoint x="1232" y="1500"/>    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="97" name="toRemoveEnt"/>      
-      <multiplicity id="98" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="99">    
-    <end type="SOURCE" refId="23" navigable="false">      
-      <attribute id="100" name="diagonal"/>      
-      <multiplicity id="101" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="102">    
-    <end type="SOURCE" refId="29"/>    
-    <end type="TARGET" refId="36"/>  
-  </generalization>  
-  <realization id="103">    
+  <generalization id="27">    
     <end type="SOURCE" refId="22"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <generalization id="104">    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="29">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="30" name="diagonal">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="31" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <association id="33">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="34" name="col">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="35" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="37" name="col">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="38" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="20"/>  
+  </generalization>  
+  <generalization id="40">    
     <end type="SOURCE" refId="17"/>    
-    <end type="TARGET" refId="36"/>  
+    <end type="TARGET" refId="18"/>  
   </generalization>  
-  <generalization id="105">    
-    <end type="SOURCE" refId="21"/>    
-    <end type="TARGET" refId="34"/>  
-  </generalization>  
-  <realization id="106">    
-    <end type="SOURCE" refId="28"/>    
-    <end type="TARGET" refId="14"/>  
+  <realization id="41">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
   </realization>  
-  <generalization id="107">    
-    <end type="SOURCE" refId="40"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <association id="108">    
+  <association id="42">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="43" name="cuerpo">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="44" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="45">    
     <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="109" name="hitbox"/>      
-      <multiplicity id="110" minimum="0" maximum="1"/>    
+      <attribute id="46" name="col">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="47" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="23" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="111">    
+  <generalization id="48">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="49">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="50" name="hitbox">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="51" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="52">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="53">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="54" name="supizq">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="56">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="58">    
     <end type="SOURCE" refId="20"/>    
-    <end type="TARGET" refId="40"/>  
+    <end type="TARGET" refId="4"/>  
   </generalization>  
-  <generalization id="112">    
+  <generalization id="59">    
     <end type="SOURCE" refId="24"/>    
-    <end type="TARGET" refId="30"/>  
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <association id="113">    
-    <bendpoint x="3564" y="736"/>    
-    <end type="SOURCE" refId="35" navigable="false">      
-      <attribute id="114" name="e"/>      
-      <multiplicity id="115" minimum="0" maximum="1"/>    
+  <generalization id="60">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="62">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="63" name="posicion">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="34" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="116">    
+  <association id="65">    
     <bendpoint x="1556" y="580"/>    
     <bendpoint x="1292" y="144"/>    
     <bendpoint x="1740" y="-320"/>    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="117" name="col"/>      
-      <multiplicity id="118" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="66" name="col">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="67" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="30" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="119">    
-    <end type="SOURCE" refId="43" navigable="false">      
-      <attribute id="120" name="e"/>      
-      <multiplicity id="121" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="34" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="122">    
-    <end type="SOURCE" refId="39"/>    
-    <end type="TARGET" refId="30"/>  
-  </generalization>  
-  <realization id="123">    
-    <end type="SOURCE" refId="37"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <realization id="124">    
-    <end type="SOURCE" refId="33"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="125">    
-    <end type="SOURCE" refId="21" navigable="false">      
-      <attribute id="126" name="col"/>      
-      <multiplicity id="127" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="43" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="128">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="129" name="posicion"/>      
-      <multiplicity id="130" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="131">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="132" name="cuerpo"/>      
-      <multiplicity id="133" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="134">    
+  <generalization id="68">    
     <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <generalization id="135">    
-    <end type="SOURCE" refId="18"/>    
-    <end type="TARGET" refId="30"/>  
+    <end type="TARGET" refId="16"/>  
   </generalization>  
-  <association id="136">    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="137" name="toAddEnt"/>      
-      <multiplicity id="138" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="139">    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="140" name="removeQueue"/>      
-      <multiplicity id="141" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="142">    
-    <end type="SOURCE" refId="31"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <realization id="143">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="14"/>  
-  </realization>  
-  <association id="144">    
-    <end type="SOURCE" refId="42" navigable="false">      
-      <attribute id="145" name="nivel"/>      
-      <multiplicity id="146" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="38" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="147">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="148" name="ia"/>      
-      <multiplicity id="149" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="150">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="40"/>  
-  </generalization>  
-  <association id="151">    
-    <end type="SOURCE" refId="37" navigable="false">      
-      <attribute id="152" name="instance"/>      
-      <multiplicity id="153" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="37" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="154">    
-    <end type="SOURCE" refId="38" navigable="false">      
-      <attribute id="155" name="player"/>      
-      <multiplicity id="156" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="157">    
-    <end type="SOURCE" refId="27"/>    
-    <end type="TARGET" refId="8"/>  
+  <generalization id="69">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="18"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

@@ -1,7 +1,9 @@
-package Entidades;
+package Entidades.PowerUp;
 
 import Colisionador.CPowerUp;
 import Colisionador.Colisionador;
+import Entidades.Entidad;
+import Entidades.Player;
 import IA.IANula;
 
 public abstract class PowerUp extends Entidad{

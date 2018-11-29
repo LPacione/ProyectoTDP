@@ -1,6 +1,7 @@
 package Colisionador;
 
 import Entidades.*;
+import Entidades.PowerUp.PowerUp;
 
 public abstract class Colisionador 
 {

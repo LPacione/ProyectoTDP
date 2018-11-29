@@ -1,29 +1,35 @@
-package Entidades;
+package Entidades.PowerUp;
 
 import Colisionador.CPowerUp;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import TiposDeDatos.Grafico;
 
-public class CampoDeProteccion extends PowerUp{
+public class TiroTriple extends PowerUp{
 
-	protected float velocidad= 1f;
+
+	protected float velocidad = 1f;
 	protected CPowerUp col;
+
 	
-	protected CampoDeProteccion() {
+	public TiroTriple() {
 		super();
-		valor=-10;
+		valor=20;
 	}
 	
+
 	protected void iniciarGraficamente() {
 		
-		grafico = new Grafico(IconsManager.campoDeProteccion);
+		grafico = new Grafico(IconsManager.tiroTriple);
 		
 		mostrador = new Mostrador(grafico.getIcon());
 	}
+	
 	public void activar() {
+		p.setTiroTriple();
 	}
 	
-	public void actualizarEntidad() {}
-	
+	public void actualizarEntidad() {
+	}
+
 }

@@ -3,7 +3,6 @@ package Level;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
-import java.util.Random;
 
 import Entidades.Barricada;
 import Entidades.Enemigo;
@@ -31,7 +30,6 @@ public class Nivel {
 	private Collection<Entidad> coleccionAAgregar;
 	private Player player;
 	private final int ultimoNivel = 6;
-	private Random rnd = new Random();
 
 
 	private static Nivel instan;
@@ -87,14 +85,9 @@ public class Nivel {
 
 	private void actualizarEliminados() {
 		for(Entidad e: demasEntidades) {
-			int aleatorio= rnd.nextInt(2)+1;
 			if(e.getVida()<=0) {
 				coleccionAEliminar.add(e);
-
 				player.sumarPuntaje(e);
-				if(aleatorio==1){
-					e.dropearPowerUp();
-				}
 			}
 		}
 	}

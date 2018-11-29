@@ -9,7 +9,7 @@ import Entidades.EnemigoKami;
 import Entidades.EnemigoKami2;
 import Entidades.Obstaculo;
 import Entidades.Player;
-import Entidades.PowerUp;
+import Entidades.PowerUp.PowerUp;
 
 public class CDisparoPlayer extends Colisionador {
 	
