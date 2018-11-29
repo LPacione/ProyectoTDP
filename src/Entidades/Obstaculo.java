@@ -9,7 +9,6 @@ import Colisionador.Colisionador;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import Refactoring.IANula;
-import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
 
 public class Obstaculo extends Entidad {

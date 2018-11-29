@@ -1,13 +1,12 @@
 package Entidades;
 
-import javax.swing.Icon;
-
 import Colisionador.Colisionador;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import Refactoring.IA;
 import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
+
 
 public abstract class Entidad implements Refrescable {
 //ObjectStructure-Element

@@ -11,7 +11,6 @@ import TiposDeDatos.Grafico;
 public class Enemigo extends Entidad {
 //Concrete Element
 	
-	private boolean cambieDeIA = false;
 	protected float damage;
 
 	public Enemigo() {
@@ -33,7 +32,6 @@ public class Enemigo extends Entidad {
 	public void aceptar(Colisionador c) {
 		c.afectarEnemigo(this);
 	}
-
 
 	public void colisionasteCon(Entidad another) {
 		another.aceptar(col);

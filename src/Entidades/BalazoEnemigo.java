@@ -6,7 +6,6 @@ import Colisionador.Colisionador;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import Refactoring.IADisparoEnem;
-import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
 
 public class BalazoEnemigo extends Balazo{

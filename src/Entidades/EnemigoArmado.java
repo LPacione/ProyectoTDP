@@ -8,15 +8,12 @@ import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import Refactoring.IAArmado;
-import TiposDeDatos.Coords;
-import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
 
 public class EnemigoArmado extends Enemigo{
 //Visitable
 	
-	private float velocidad = 2f;
-	private boolean cambieDeIA = false;
+	//private float velocidad = 2f;
 	protected int danoBala;
 	protected CEnemigoArmado col;
 
@@ -49,7 +46,6 @@ public class EnemigoArmado extends Enemigo{
 		b.getGrafico().setPosicion(xBala,yBala);
 		Nivel n = Nivel.getInstancia();
 		n.agregarEntidad(b);
-		
 	}
 	
 	public void actualizarEntidad() {
@@ -108,7 +104,6 @@ public class EnemigoArmado extends Enemigo{
 		if(powerUp!=null) {
 			powerUp.cuerpo.setPosicion(cuerpo.getPosicion());
 			n.agregarEntidad(powerUp);
-			
 		}
 	}
 

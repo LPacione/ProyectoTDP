@@ -5,11 +5,7 @@ import Colisionador.CDisparoPlayer;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
-import Refactoring.IA;
 import Refactoring.IADisparoPlayer;
-//import InterfazGrafica.Mostrador;
-//import TiposDeDatos.Coords;
-import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
 
 public class BalazoPlayer extends Balazo{

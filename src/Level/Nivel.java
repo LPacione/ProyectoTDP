@@ -12,7 +12,6 @@ import Entidades.Entidad;
 import Entidades.Obstaculo;
 import Entidades.Player;
 import Refactoring.Pantalla;
-import TiposDeDatos.Coords;
 import TiposDeDatos.Posicion;
 
 public class Nivel {

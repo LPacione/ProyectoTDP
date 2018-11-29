@@ -3,7 +3,6 @@ package Entidades;
 import Colisionador.CPowerUp;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
-import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
 
 public class TiroTriple extends PowerUp{

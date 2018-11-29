@@ -12,11 +12,7 @@ import TiposDeDatos.Grafico;
 public class Player extends Entidad {
 	//Visitable
 
-
-	private static Player inst;
 	private int puntaje;
-
-
 	private int danoBala;
 
 	public Player() {

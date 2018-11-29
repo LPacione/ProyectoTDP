@@ -5,8 +5,6 @@ import javax.swing.JLabel;
 
 public class Mostrador extends JLabel{
 	
-	
-
 	public Mostrador(Icon icon) {
 		super(icon);
 		setBounds(-900,-900,icon.getIconWidth(),icon.getIconHeight());

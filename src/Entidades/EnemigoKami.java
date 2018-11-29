@@ -6,14 +6,13 @@ import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import Refactoring.IABuscador;
 import Refactoring.IAMareado;
-import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
 
 public class EnemigoKami extends Enemigo{
 //Visitable
 	
 
-	private float velocidad = 2f;
+	//private float velocidad = 2f;
 	private boolean cambieDeIA = false;
 	protected int dano;
 	int i = 0;

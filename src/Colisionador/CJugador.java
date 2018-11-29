@@ -8,6 +8,7 @@ import Entidades.EnemigoKami;
 public class CJugador extends Colisionador{
 	
 	
+
 	public void afectarDisparoEnemigo(BalazoEnemigo balazo) {
 		balazo.eliminar();
 	}
