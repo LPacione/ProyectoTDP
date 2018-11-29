@@ -88,6 +88,7 @@ public class Nivel {
 		for(Entidad e: demasEntidades) {
 			if(e.getVida()<=0) {
 				coleccionAEliminar.add(e);
+				player.sumarPuntaje(e);
 			}
 		}
 	}
@@ -98,15 +99,47 @@ public class Nivel {
 		numeroNivel=j;
 
 		if(j==1) {
-			cantEnemsK=2;
-			cantEnemsA=2;
-			cantEnemsK2=2;
+			cantEnemsK=3;
+			cantEnemsA=3;
+			cantEnemsK2=3;
+			cantObs=2;
+			cantBarr=2;
 			crearNivel1();
 		}
-		if(j==2) crearNivel2();
-		if(j==3) crearNivel3();
-		if(j==4) crearNivel4();
-		if(j==5) crearNivel5();
+		if(j==2) {
+			cantEnemsK2=4;
+			cantEnems=4;
+			cantEnemsA=4;
+			cantObs=2;
+			cantBarr=2;
+			crearNivel2();
+		}
+		if(j==3) {
+			cantEnemsAE=5;
+			cantEnemsK=4;
+			cantEnemsK2=4;
+			cantObs=3;
+			cantBarr=2;
+			crearNivel3();
+		}
+		if(j==4) {
+			cantEnemsAE=5;
+			cantEnemsA=5;
+			cantEnems=5;
+			cantObs=3;
+			cantBarr=3;
+			crearNivel4();
+		}
+		if(j==5) {
+			cantEnemsAE=4;
+			cantEnemsA=4;
+			cantEnems=5;
+			cantEnemsK=4;
+			cantEnemsK2=4;
+			cantObs=4;
+			cantBarr=4;
+			crearNivel5();
+		}
 
 	}
 
@@ -116,7 +149,7 @@ public class Nivel {
 		for(int i=1; i<=cantEnemsK;i++) {
 			EnemigoKami enemK = new EnemigoKami();
 			demasEntidades.add(enemK);
-			Posicion pos = new Posicion(200*i,350);
+			Posicion pos = new Posicion(200*i,250);
 			enemK.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
@@ -124,7 +157,7 @@ public class Nivel {
 		for(int i=1; i<=cantEnemsK;i++) {
 			EnemigoKami2 enemK2 = new EnemigoKami2();
 			demasEntidades.add(enemK2);
-			Posicion pos = new Posicion(200*i,350);
+			Posicion pos = new Posicion(150*i,150);
 			enemK2.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
@@ -140,10 +173,17 @@ public class Nivel {
 		for(int i=1; i<=cantObs; i++) {
 			Obstaculo obs = new Obstaculo();
 			demasEntidades.add(obs);
-			Posicion pos = new Posicion(300*i,200);
+			Posicion pos = new Posicion(250*i,200);
 			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
+		//BARRICADAS
+		for(int i=1; i<=cantBarr; i++) {
+			Barricada barr = new Barricada();
+			demasEntidades.add(barr);
+			Posicion pos = new Posicion(300*i,200);
+			barr.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
 
 	}
 
@@ -177,11 +217,17 @@ public class Nivel {
 		for(int i=1; i<=cantObs; i++) {
 			Obstaculo obs = new Obstaculo();
 			demasEntidades.add(obs);
-			Posicion pos = new Posicion(300*i,200);
+			Posicion pos = new Posicion(250*i,200);
 			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
-
+		//BARRICADAS
+		for(int i=1; i<=cantBarr; i++) {
+			Barricada barr = new Barricada();
+			demasEntidades.add(barr);
+			Posicion pos = new Posicion(300*i,200);
+			barr.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
 
 	}
 
@@ -199,7 +245,7 @@ public class Nivel {
 		for(int i=1; i<=cantEnemsK;i++) {
 			EnemigoKami2 enemK2 = new EnemigoKami2();
 			demasEntidades.add(enemK2);
-			Posicion pos = new Posicion(200*i,350);
+			Posicion pos = new Posicion(250*i,150);
 			enemK2.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
@@ -215,8 +261,16 @@ public class Nivel {
 		for(int i=1; i<=cantObs; i++) {
 			Obstaculo obs = new Obstaculo();
 			demasEntidades.add(obs);
-			Posicion pos = new Posicion(300*i,200);
+			Posicion pos = new Posicion(250*i,200);
 			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//BARRICADAS
+		for(int i=1; i<=cantBarr; i++) {
+			Barricada barr = new Barricada();
+			demasEntidades.add(barr);
+			Posicion pos = new Posicion(300*i,200);
+			barr.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
 	}
@@ -252,10 +306,17 @@ public class Nivel {
 		for(int i=1; i<=cantObs; i++) {
 			Obstaculo obs = new Obstaculo();
 			demasEntidades.add(obs);
-			Posicion pos = new Posicion(300*i,200);
+			Posicion pos = new Posicion(250*i,200);
 			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
+		//BARRICADAS
+		for(int i=1; i<=cantBarr; i++) {
+			Barricada barr = new Barricada();
+			demasEntidades.add(barr);
+			Posicion pos = new Posicion(300*i,200);
+			barr.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
 	}
 
 	private void crearNivel5() {
@@ -305,17 +366,16 @@ public class Nivel {
 		for(int i=1; i<=cantObs; i++) {
 			Obstaculo obs = new Obstaculo();
 			demasEntidades.add(obs);
-			Posicion pos = new Posicion(300*i,200);
+			Posicion pos = new Posicion(250*i,200);
 			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
-		}	
-	
-	
-		//BARRICADA
-		for(int i=1; i<=cantObs; i++) {
-			Barricada bar = new Barricada();
-			demasEntidades.add(bar);
-			Posicion pos = new Posicion(250*i,150);
-			bar.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//BARRICADAS
+		for(int i=1; i<=cantBarr; i++) {
+			Barricada barr = new Barricada();
+			demasEntidades.add(barr);
+			Posicion pos = new Posicion(300*i,200);
+			barr.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
 
 	}

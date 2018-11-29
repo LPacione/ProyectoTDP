@@ -5,11 +5,14 @@ import javax.swing.JLabel;
 
 import Datos.GameData;
 import Datos.IconsManager;
+import Level.Nivel;
 
 public class PantallaGanar extends Pantalla {
 	
 	private int contador;
 	private final int contadorMax = 200;
+	private JLabel puntaje;
+	private JLabel puntuacion;
 
 	public PantallaGanar(ControladorPantallas cp) {
 		super(cp);
@@ -32,6 +35,17 @@ public class PantallaGanar extends Pantalla {
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);
 		frame.setResizable(false);
+		puntaje= new JLabel("Puntaje");
+		puntaje.setBounds(0, 0, 100, 100);
+		frame.add(puntaje);
+		puntuacion= new JLabel();
+		int p= Nivel.getInstancia().getPuntaje();
+		String s= Integer.toString(p);
+		puntuacion.setText(s);
+		puntuacion.setBounds(60, 0, 100, 100);
+		frame.add(puntuacion);
+		
+		
 	}
 
 	public void refresh() {

@@ -1,6 +1,6 @@
 package Entidades;
 
-import Colisionador.CEnemigoKami;
+import Colisionador.CEnemigoKami2;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import IA.IABuscador;
@@ -22,7 +22,7 @@ public class EnemigoKami2 extends Enemigo{
 		valor=15;
 		dano=50;
 		vida = 200;
-		col = new CEnemigoKami(dano);
+		col = new CEnemigoKami2(dano);
 	}
 	
 	protected void iniciarGraficamente() {
