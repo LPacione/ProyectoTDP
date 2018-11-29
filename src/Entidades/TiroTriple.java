@@ -26,8 +26,7 @@ public class TiroTriple extends PowerUp{
 	}
 	
 	public void activar() {
-		// TODO Auto-generated method stub
-		
+		p.setTiroTriple();
 	}
 	
 	public void actualizarEntidad() {

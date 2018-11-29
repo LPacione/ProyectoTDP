@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 import Datos.GameData;
+import Entidades.Barricada;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
 import Entidades.EnemigoArmadoEspecial;
@@ -13,7 +14,6 @@ import Entidades.EnemigoKami2;
 import Entidades.Entidad;
 import Entidades.Obstaculo;
 import Entidades.Player;
-import Refactoring.Pantalla;
 import TiposDeDatos.Posicion;
 
 public class Nivel {
@@ -22,6 +22,7 @@ public class Nivel {
 	private int cantEnemsK;
 	private int cantEnemsK2;
 	private int cantObs;
+	private int cantBarr;
 	private int cantEnemsA;
 	private int cantEnemsAE;
 	private int numeroNivel;
@@ -29,7 +30,6 @@ public class Nivel {
 	private Collection<Entidad> coleccionAEliminar;
 	private Collection<Entidad> coleccionAAgregar;
 	private Player player;
-	private Pantalla pantalla;
 	private final int ultimoNivel = 6;
 
 
@@ -56,10 +56,6 @@ public class Nivel {
 		return ultimoNivel;
 	}
 
-	public void setPantalla(Pantalla p) {
-		pantalla = p;
-	}
-
 	public Player getPlayer() {
 		return player;
 	}
@@ -80,7 +76,6 @@ public class Nivel {
 		actualizarEliminados();
 		for(Entidad e: coleccionAEliminar) {
 			demasEntidades.remove(e);
-			pantalla.removeMostrable(e.getMostrable());
 		}
 		coleccionAEliminar.removeAll(coleccionAEliminar);
 		for(Entidad e: coleccionAAgregar) {
@@ -91,8 +86,9 @@ public class Nivel {
 
 	private void actualizarEliminados() {
 		for(Entidad e: demasEntidades) {
-			if(e.getVida()<=0)
+			if(e.getVida()<=0) {
 				coleccionAEliminar.add(e);
+			}
 		}
 	}
 
@@ -311,8 +307,16 @@ public class Nivel {
 			demasEntidades.add(obs);
 			Posicion pos = new Posicion(300*i,200);
 			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}	
+	
+	
+		//BARRICADA
+		for(int i=1; i<=cantObs; i++) {
+			Barricada bar = new Barricada();
+			demasEntidades.add(bar);
+			Posicion pos = new Posicion(250*i,150);
+			bar.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
-
 
 	}
 

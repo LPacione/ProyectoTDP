@@ -21,13 +21,12 @@ public class PantallaJuego extends Pantalla{
 		super(cp);
 		
 		nivel = Nivel.getInstancia();
-		nivel.setPantalla(this);
 		
 		frame.addKeyListener(Teclado.getInstancia());
 		
-		agregarTodo();
 		i = 0;
 		
+		inicializarContainer();
 	}
 
 	
@@ -51,14 +50,13 @@ public class PantallaJuego extends Pantalla{
 		
 	}
 	
-	private void agregarTodo() {
+	private void inicializarContainer() {
 		for (Entidad e: nivel.getEntidades()) {
 			addMostrable(e.getMostrable());
 		}
 	}
-
 	
-	public void refrescarTodo() {
+	private void refrescarTodo() {
 		for (Entidad e: nivel.getEntidades()) {
 			e.refresh();
 		}
@@ -69,13 +67,22 @@ public class PantallaJuego extends Pantalla{
 		
 		controlarVida();
 		
-		agregarTodo();
-		
 		Teclado.getInstancia().actualizarTeclado();
 		
 		checkNivel();
 		
+		actualizarContainer();
+		
 		frame.repaint();
+		
+	}
+	
+	private void actualizarContainer() {
+		container.removeAll();
+		for (Entidad e: nivel.getEntidades()) {
+			addMostrable(e.getMostrable());
+		}
+		container.add(vida);
 	}
 	
 	private void checkNivel() {

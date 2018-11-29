@@ -7,6 +7,7 @@ import Refactoring.IANula;
 public abstract class PowerUp extends Entidad{
 
 	protected int vida;
+	protected Player p;
 	
 	protected PowerUp() {
 		super();	

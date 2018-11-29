@@ -2,6 +2,7 @@ package Colisionador;
 
 import Entidades.BalazoEnemigo;
 import Entidades.BalazoPlayer;
+import Entidades.Obstaculo;
 import Entidades.Player;
 
 public class CEnemigoKami extends Colisionador {
@@ -23,5 +24,9 @@ public class CEnemigoKami extends Colisionador {
 	
 	public void afectarBalazoEnemigo(BalazoEnemigo b) {
 		b.eliminar();
+	}
+	
+	public void afectarObstaculo(Obstaculo o) {
+		o.eliminar();
 	}
 }

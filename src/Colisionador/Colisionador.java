@@ -19,5 +19,7 @@ public abstract class Colisionador
 	public void afectarPowerUp(PowerUp p) {}
 	public void afectarEnemigoKami2(EnemigoKami2 enemigoKami2) {}
 	public void afectarEnemigoArmadoEspecial(EnemigoArmadoEspecial enemigoArmadoEspecial) {}
+	public void afectarBarricada(Barricada bar) {}
+
 	
 }

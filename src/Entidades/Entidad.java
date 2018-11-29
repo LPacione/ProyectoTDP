@@ -1,5 +1,7 @@
 package Entidades;
 
+import java.util.Random;
+
 import Colisionador.Colisionador;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
@@ -93,5 +95,7 @@ public abstract class Entidad implements Refrescable {
 	public void colisionar(Entidad e) {
 		e.colisionasteCon(this);
 	}
+	
+	protected void dropearPowerUp() {}
 	
 }
