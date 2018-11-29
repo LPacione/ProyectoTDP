@@ -17,5 +17,6 @@ public abstract class Colisionador
 	public void afectarDisparoEnemigo(BalazoEnemigo b) {}
 	public void afectarDisparoPlayer(BalazoPlayer b) {}
 	public void afectarPowerUp(PowerUp p) {}
+	public void afectarBarricada(Barricada bar) {}
 	
 }

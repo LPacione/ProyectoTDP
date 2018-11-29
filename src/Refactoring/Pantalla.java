@@ -30,6 +30,7 @@ public abstract class Pantalla{
 		container.remove(mostrable);
 	}
 	
+	
 	public void addTeclado(KeyListener kl) {
 		frame.addKeyListener(kl);
 	}

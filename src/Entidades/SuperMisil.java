@@ -23,7 +23,9 @@ public class SuperMisil extends PowerUp{
 	}
 
 
-	public void activar() {}
+	public void activar() {
+		p.setSuperMisil();
+	}
 
 	protected void actualizarEntidad() {}
 

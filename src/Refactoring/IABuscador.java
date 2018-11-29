@@ -20,6 +20,10 @@ public class IABuscador extends IA{
 		}
 		y++;
 		
+		if(y>600) {
+			y=0;
+		}
+		
 		e.getGrafico().setPosicion(x, y);
 	}
 

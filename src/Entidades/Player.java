@@ -68,9 +68,6 @@ public class Player extends Entidad {
 	}
 	
 	public void setTiroTriple() {
-		disparar();
-		disparar();
-		disparar();
 	}
 
 	public void setSuperMisil() {

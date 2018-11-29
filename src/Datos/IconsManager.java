@@ -10,6 +10,7 @@ public class IconsManager {
 	public static Icon enemigoKami= new ImageIcon(Pictures.enemigo2);
 	public static Icon player= new ImageIcon(Pictures.player);
 	public static Icon obstaculo= new ImageIcon(Pictures.obstaculos);
+	public static Icon barricada = new ImageIcon(Pictures.barricada);
 	public static Icon fondo = new ImageIcon(Pictures.fondo);
 	public static Icon fondoInicio = new ImageIcon(Pictures.fondoInicio);
 	public static Icon balazoEnemigo= new ImageIcon(Pictures.fireEnemigo);

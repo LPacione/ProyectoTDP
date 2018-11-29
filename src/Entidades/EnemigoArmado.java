@@ -88,7 +88,7 @@ public class EnemigoArmado extends Enemigo{
 	protected void dropearPowerUp() {
 		Nivel n= Nivel.getInstancia();
 		PowerUp powerUp=null;
-		int nro= new Random().nextInt(2)+1;
+		int nro= new Random().nextInt(10)+1;
 			if(nro==1)
 				powerUp= new SuperMisil();
 			if(nro==2)

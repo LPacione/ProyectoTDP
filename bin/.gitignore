@@ -1,7 +1,5 @@
-/InterfazGrafica/
-/Main/
-/Animation/
 /Entidades/
 /Level/
-/TiposDeDatos/
+/Datos/
 /Colisionador/
+/Refactoring/

@@ -1,6 +1,7 @@
 package Colisionador;
 
 import Entidades.BalazoEnemigo;
+import Entidades.Barricada;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
 import Entidades.EnemigoKami;
@@ -31,6 +32,9 @@ public class CDisparoPlayer extends Colisionador {
 	}
 	public void afectarObstaculo(Obstaculo o) {
 		o.setVida(o.getVida()-damage);
+	}
+	public void afectarBarricada(Barricada bar) {
+		bar.setVida(bar.getVida()-damage);
 	}
 	public void afectarPowerUp(PowerUp p) {
 		p.activar();
