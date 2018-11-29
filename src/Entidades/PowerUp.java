@@ -8,6 +8,8 @@ public abstract class PowerUp extends Entidad{
 
 	protected int vida;
 	protected Player p;
+	protected final int tiempoMax = 300;
+	protected int contador;
 	
 	protected PowerUp() {
 		super();	
@@ -17,6 +19,13 @@ public abstract class PowerUp extends Entidad{
 	
 	public abstract void activar();
 		
+	public void actualizar() {
+		contador++;
+		if (contador == tiempoMax) {
+			this.eliminar();
+		}
+	}
+	
 	public void aceptar(Colisionador c) {
 		c.afectarPowerUp(this);
 	}

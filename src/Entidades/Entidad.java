@@ -1,9 +1,7 @@
 package Entidades;
 
-import java.util.Random;
-
 import Colisionador.Colisionador;
-import IA.IA;
+import IA.*;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import TiposDeDatos.CuerpoRigido;
@@ -12,15 +10,6 @@ import TiposDeDatos.Grafico;
 
 public abstract class Entidad implements Refrescable {
 //ObjectStructure-Element
-	
-	
-	/*
-	 * Hacer el patron State en entidad para generalizar la IA
-	 * meter el onRefresh en entidad
-	 * generalizar mas todo
-	 * los puntajes y demas cosas buscar de meterlas en entidad
-	 * que cada entidad cambie de IA sin que nadie se entere, solo ellos.
-	 */
 	
 	public CuerpoRigido cuerpo;
 	protected Mostrador mostrador;
@@ -96,6 +85,11 @@ public abstract class Entidad implements Refrescable {
 		e.colisionasteCon(this);
 	}
 	
-	protected void dropearPowerUp() {}
+	public void pausarEntidad() {
+		ia = new IANula();
+	}
+	public void resetearEntidad() {}
+	
+	public void dropearPowerUp() {}
 	
 }

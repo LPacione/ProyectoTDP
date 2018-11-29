@@ -53,4 +53,8 @@ public class EnemigoKami2 extends Enemigo{
 	public String getName() {
 		return "Kami2";
 	}
+	
+	public void resetearEntidad() {
+		ia = new IABuscador();
+	}
 }

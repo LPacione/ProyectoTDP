@@ -14,6 +14,7 @@ public class Player extends Entidad {
 
 	private int puntaje;
 	private int danoBala;
+	private boolean escudo;
 
 	public Player() {
 		super();
@@ -22,7 +23,7 @@ public class Player extends Entidad {
 		vida = 100;
 		col  = new CJugador();
 		danoBala=20;
-		
+		setEscudo(false);
 	}
 	
 	protected void iniciarGraficamente() {
@@ -76,5 +77,13 @@ public class Player extends Entidad {
 	
 	public String getName() {
 		return "Player";
+	}
+
+	public boolean getEscudo() {
+		return escudo;
+	}
+
+	public void setEscudo(boolean escudo) {
+		this.escudo = escudo;
 	}
 }

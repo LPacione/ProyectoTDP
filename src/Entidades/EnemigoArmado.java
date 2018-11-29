@@ -6,6 +6,7 @@ import Colisionador.CEnemigoArmado;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import IA.IAArmado;
+import IA.IAMareado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import TiposDeDatos.Grafico;
@@ -85,26 +86,8 @@ public class EnemigoArmado extends Enemigo{
 		return "Armado";
 	}
 	
-	protected void dropearPowerUp() {
-		Nivel n= Nivel.getInstancia();
-		PowerUp powerUp=null;
-		int nro= new Random().nextInt(10)+1;
-			if(nro==1)
-				powerUp= new SuperMisil();
-			if(nro==2)
-				powerUp= new BombaTemporal();
-			if(nro==3)
-				powerUp= new TiroTriple();
-			if(nro==4)
-				powerUp= new DetenerTiempo();
-			if(nro==5)
-				powerUp=  new SumaVida();
-			if(nro==6)
-				powerUp= new CampoDeProteccion();
-		if(powerUp!=null) {
-			powerUp.cuerpo.setPosicion(cuerpo.getPosicion());
-			n.agregarEntidad(powerUp);
-		}
+	public void resetearEntidad() {
+		ia = new IAArmado();
 	}
 
 }

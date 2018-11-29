@@ -22,6 +22,7 @@ public class SumaVida extends PowerUp{
 		
 		mostrador = new Mostrador(grafico.getIcon());
 	}
+	
 	public void activar() {
 		p.setVida(p.getVida()+50);
 	}

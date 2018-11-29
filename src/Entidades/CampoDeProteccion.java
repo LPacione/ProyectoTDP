@@ -22,7 +22,6 @@ public class CampoDeProteccion extends PowerUp{
 		mostrador = new Mostrador(grafico.getIcon());
 	}
 	public void activar() {
-		
 	}
 	
 	public void actualizarEntidad() {}

@@ -3,8 +3,8 @@ package Level;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.Random;
 
-import Datos.GameData;
 import Entidades.Barricada;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
@@ -85,16 +85,18 @@ public class Nivel {
 	}
 
 	private void actualizarEliminados() {
+		int nro= new Random().nextInt(3)+1;
 		for(Entidad e: demasEntidades) {
 			if(e.getVida()<=0) {
 				coleccionAEliminar.add(e);
+				if(nro == 1) {
+					e.dropearPowerUp();
+				}
 			}
 		}
 	}
 
 	private void crear(int j) {
-		int ancho = GameData.WindowSize.width;
-
 		numeroNivel=j;
 
 		if(j==1) {
@@ -158,7 +160,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS KAMI2
-		for(int i=1; i<=cantEnemsK;i++) {
+		for(int i=1; i<=cantEnemsK2;i++) {
 			EnemigoKami2 enemK2 = new EnemigoKami2();
 			demasEntidades.add(enemK2);
 			Posicion pos = new Posicion(200*i,350);
@@ -196,7 +198,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS KAMI2
-		for(int i=1; i<=cantEnemsK;i++) {
+		for(int i=1; i<=cantEnemsK2;i++) {
 			EnemigoKami2 enemK2 = new EnemigoKami2();
 			demasEntidades.add(enemK2);
 			Posicion pos = new Posicion(200*i,350);
@@ -204,7 +206,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS ARMADO ESPECIAL
-		for(int i=1; i<=cantEnemsA; i++) {
+		for(int i=1; i<=cantEnemsAE; i++) {
 			EnemigoArmadoEspecial enemA= new EnemigoArmadoEspecial();
 			demasEntidades.add(enemA);
 			Posicion pos = new Posicion(200*i,50);
@@ -241,7 +243,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS ARMADO ESPECIAL
-		for(int i=1; i<=cantEnemsA; i++) {
+		for(int i=1; i<=cantEnemsAE; i++) {
 			EnemigoArmadoEspecial enemA= new EnemigoArmadoEspecial();
 			demasEntidades.add(enemA);
 			Posicion pos = new Posicion(200*i,50);
@@ -278,7 +280,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS ARMADO ESPECIAL
-		for(int i=1; i<=cantEnemsA; i++) {
+		for(int i=1; i<=cantEnemsAE; i++) {
 			EnemigoArmadoEspecial enemA= new EnemigoArmadoEspecial();
 			demasEntidades.add(enemA);
 			Posicion pos = new Posicion(200*i,50);
@@ -294,7 +296,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS KAMI2
-		for(int i=1; i<=cantEnemsK;i++) {
+		for(int i=1; i<=cantEnemsK2;i++) {
 			EnemigoKami2 enemK2 = new EnemigoKami2();
 			demasEntidades.add(enemK2);
 			Posicion pos = new Posicion(200*i,350);
@@ -311,13 +313,12 @@ public class Nivel {
 	
 	
 		//BARRICADA
-		for(int i=1; i<=cantObs; i++) {
+		for(int i=1; i<=cantBarr; i++) {
 			Barricada bar = new Barricada();
 			demasEntidades.add(bar);
 			Posicion pos = new Posicion(250*i,150);
 			bar.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
-
 	}
 
 	public int getNumeroNivel() {

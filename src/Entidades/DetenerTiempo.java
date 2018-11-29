@@ -3,6 +3,7 @@ package Entidades;
 import Colisionador.CPowerUp;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
+import Level.Nivel;
 import TiposDeDatos.Grafico;
 
 public class DetenerTiempo extends PowerUp{
@@ -23,11 +24,25 @@ public class DetenerTiempo extends PowerUp{
 	}
 
 	public void activar() {
-		// TODO Auto-generated method stub
-		
+		Nivel n = Nivel.getInstancia();
+		for(Entidad e : n.getEntidades()) {
+			if(e!=p) {
+				e.pausarEntidad();
+				//falta el volverlos a la normalidad
+			}
+		}
 	}
 	
-	public void actualizarEntidad() {}
+	public void actualizarEntidad() {
+		if(contador == tiempoMax) {
+			Nivel n = Nivel.getInstancia();
+			for(Entidad e : n.getEntidades()) {
+				if(e!=p) {
+					e.resetearEntidad();
+				}
+			}
+		}
+	}
 
 }
 
