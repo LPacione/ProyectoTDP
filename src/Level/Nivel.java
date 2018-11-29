@@ -3,8 +3,8 @@ package Level;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.Random;
 
-import Datos.GameData;
 import Entidades.Barricada;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
@@ -31,6 +31,7 @@ public class Nivel {
 	private Collection<Entidad> coleccionAAgregar;
 	private Player player;
 	private final int ultimoNivel = 6;
+	private Random rnd = new Random();
 
 
 	private static Nivel instan;
@@ -86,15 +87,18 @@ public class Nivel {
 
 	private void actualizarEliminados() {
 		for(Entidad e: demasEntidades) {
+			int aleatorio= rnd.nextInt(2)+1;
 			if(e.getVida()<=0) {
 				coleccionAEliminar.add(e);
 				player.sumarPuntaje(e);
+				if(aleatorio==1){
+					e.dropearPowerUp();
+				}
 			}
 		}
 	}
 
 	private void crear(int j) {
-		int ancho = GameData.WindowSize.width;
 
 		numeroNivel=j;
 
@@ -154,7 +158,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS KAMI2
-		for(int i=1; i<=cantEnemsK;i++) {
+		for(int i=1; i<=cantEnemsK2;i++) {
 			EnemigoKami2 enemK2 = new EnemigoKami2();
 			demasEntidades.add(enemK2);
 			Posicion pos = new Posicion(150*i,150);
@@ -250,7 +254,7 @@ public class Nivel {
 		}
 
 		//ENEMIGOS ARMADO ESPECIAL
-		for(int i=1; i<=cantEnemsA; i++) {
+		for(int i=1; i<=cantEnemsAE; i++) {
 			EnemigoArmadoEspecial enemA= new EnemigoArmadoEspecial();
 			demasEntidades.add(enemA);
 			Posicion pos = new Posicion(200*i,50);

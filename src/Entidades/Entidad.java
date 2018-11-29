@@ -96,6 +96,6 @@ public abstract class Entidad implements Refrescable {
 		e.colisionasteCon(this);
 	}
 	
-	protected void dropearPowerUp() {}
+	public void dropearPowerUp() {}
 	
 }

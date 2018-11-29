@@ -60,7 +60,7 @@ public class Enemigo extends Entidad {
 		mover();
 	}
 	
-	protected void dropearPowerUp() {
+	public void dropearPowerUp() {
 		Nivel n= Nivel.getInstancia();
 		PowerUp powerUp=null;
 		int nro= new Random().nextInt(10)+1;
