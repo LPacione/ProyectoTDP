@@ -1,39 +1,58 @@
 package Entidades;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
-import Animation.Pictures;
 import Colisionador.CEnemigoKami;
 import Colisionador.Colisionador;
-import IA.FollowIA;
+import Datos.IconsManager;
+import InterfazGrafica.Mostrador;
+import Refactoring.IABuscador;
+import Refactoring.IAMareado;
+import TiposDeDatos.CuerpoRigido;
+import TiposDeDatos.Grafico;
 
 public class EnemigoKami extends Enemigo{
 //Visitable
 	
-	public static Icon ic2 = new ImageIcon(Pictures.enemigo2);
+
 	private float velocidad = 2f;
+	private boolean cambieDeIA = false;
 	protected int dano;
 	int i = 0;
 	
-	public EnemigoKami(Icon icon) {
-		super(icon);
-		ia = new FollowIA();
+	public EnemigoKami() {
+		super();
+		ia = new IAMareado();
 		valor=15;
 		dano=50;
 		vida = 200;
 		col = new CEnemigoKami(dano);
 	}
-
-	public void onRefresh() {
-		cuerpo.mover(ia.ADondeVoy(this).multK(velocidad));
+	
+	protected void iniciarGraficamente() {
+		
+		grafico = new Grafico(IconsManager.enemigoKami);
+		
+		mostrador = new Mostrador(grafico.getIcon());
 	}
 	
-	public int getDano() {
-		return dano;
+	protected void mover() {
+		ia.mover(this);
+		if(getVida()<=50 && !cambieDeIA) {
+			cambieDeIA = true;
+			ia = new IABuscador();
+		}
 	}
 	
 	public void aceptar(Colisionador c) {
 		c.afectarEnemigoKami(this);
+	}
+	
+	public void colisionasteCon(Entidad another) {
+		if (another instanceof Player) 
+			System.out.println("acaasd");
+		another.aceptar(col);		
+	}
+	
+	public String getName() {
+		return "Kami";
 	}
 }

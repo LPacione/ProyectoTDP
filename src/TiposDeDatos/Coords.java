@@ -51,6 +51,12 @@ public class Coords {
 		return (otra.x-x)*(otra.x-x)+(otra.y-y)*(otra.y-y);
 	}
 	
-	
+	public boolean estaFuera() {
+		boolean fuera = false;
+		if (x>850 || x < -50 || y > 650 || y < -50) {
+			fuera = true;
+		}
+		return fuera;
+	}
 	
 }

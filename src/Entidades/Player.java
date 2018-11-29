@@ -1,55 +1,57 @@
 package Entidades;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
-import Animation.Pictures;
 import Colisionador.CJugador;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
-import Entrada.Discreta;
-import IA.PseudoIA;
-import Level.AbsNivel;
-import Level.LevelDirector;
-import TiposDeDatos.Coords;
+import Entrada.Teclado;
+import InterfazGrafica.Mostrador;
+import Level.Nivel;
+import Refactoring.IAPlayer;
+import TiposDeDatos.Grafico;
 
 public class Player extends Entidad {
 	//Visitable
 
 
-	private static Icon playerIcon = new ImageIcon(Pictures.player);
 	private static Player inst;
 	private int puntaje;
 
-	public static Player getInstance(){
-		inst = inst != null? inst : new Player(playerIcon);
-		return inst;
-	}
-	
-	private Discreta disparoControl;
 
-	protected Player(Icon icon) {
-		super(icon);
+	private int danoBala;
+
+	public Player() {
+		super();
 		puntaje = 0;
-		ia = new PseudoIA();
-		cuerpo.setVelocidadMaxima(3);
-		disparoControl = new Discreta(this::disparar, Discreta.espacio);
+		ia = new IAPlayer();
 		vida = 100;
 		col  = new CJugador();
+		danoBala=20;
+		
+	}
+	
+	protected void iniciarGraficamente() {
+		
+		grafico = new Grafico(IconsManager.player);
+		
+		mostrador = new Mostrador(grafico.getIcon());
+		
+		grafico.setPosicion(400, 500);
+	}
+	
+	private void disparar() {
+		if(Teclado.getInstancia().espacio()) {
+			Nivel n = Nivel.getInstancia();
+			Balazo b = new BalazoPlayer(danoBala);
+			int xBala =(int) grafico.getPosicion().getX();
+			int yBala =(int) grafico.getPosicion().getY();
+			b.getGrafico().setPosicion(xBala,yBala);
+			n.agregarEntidad(b);
+		}
 	}
 
-	public void disparar() {
-		Balazo b = new BalazoPlayer(IconsManager.balazo);
-		b.cuerpo.setPosicion(cuerpo.getPosicion().sumar(
-			new Coords(playerIcon.getIconWidth()/2 -b.getMostrable().getIcon().getIconWidth()/2,-40)));
-		AbsNivel n = LevelDirector.instancia().currentLevel();
-		n.addEntity(b);
-		ElConocedor.instancia().add(b);
-	}
-
-	public void onRefresh() {
-		cuerpo.mover(ia.ADondeVoy(this));
-		this.getPuntaje();
+	public void actualizarEntidad() {
+		mover();
+		disparar();
 	}
 
 	public void sumarPuntaje(Entidad e) {
@@ -67,5 +69,19 @@ public class Player extends Entidad {
 
 	public void colisionasteCon(Entidad another) {
 		another.aceptar(col);		
+	}
+	
+	public void setTiroTriple() {
+		disparar();
+		disparar();
+		disparar();
+	}
+
+	public void setSuperMisil() {
+		danoBala=50;
+	}
+	
+	public String getName() {
+		return "Player";
 	}
 }

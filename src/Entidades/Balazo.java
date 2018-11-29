@@ -1,36 +1,17 @@
 package Entidades;
 
-
-import javax.swing.Icon;
-
-import Colisionador.*;
-import IA.IA;
-import IA.IABalaEnemigo;
-import IA.IABalaPlayer;
-//import InterfazGrafica.Mostrador;
-//import TiposDeDatos.Coords;
-import TiposDeDatos.CuerpoRigido;
-
 public abstract class Balazo extends Entidad{
 
 
 	protected float velocidad;
 	protected int dano;
-	protected IA ia;
 	
 	
-	public Balazo(Icon icon) {
-		super(icon);
+	public Balazo(int dano) {
+		super();
+		this.dano = dano;
 	}
 
-	public abstract void onRefresh();
-
 	public abstract int getDano();
-		
-	public abstract void aceptar(Colisionador c);
-	
-	public abstract void colisionasteCon(Entidad another) ;
-
-	public abstract void disparar();
 
 }

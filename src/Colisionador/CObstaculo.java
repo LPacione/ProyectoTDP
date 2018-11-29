@@ -1,12 +1,11 @@
 package Colisionador;
 
-import Entidades.Balazo;
+import Entidades.BalazoPlayer;
 
 public class CObstaculo extends Colisionador{
 
-	@Override
-	public void afectarDisparo(Balazo balazo) {
-		balazo.setVida(-2);
+	public void afectarDisparoPlayer(BalazoPlayer balazo) {
+		balazo.eliminar();
 	}
 	
 }

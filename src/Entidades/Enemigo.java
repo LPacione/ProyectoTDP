@@ -1,51 +1,51 @@
 package Entidades;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import Animation.Pictures;
-import Colisionador.*;
-import IA.*;
+import Colisionador.CEnemigo;
+import Colisionador.Colisionador;
+import Datos.IconsManager;
+import InterfazGrafica.Mostrador;
+import Refactoring.IAMareado;
+import TiposDeDatos.Grafico;
 
 
 public class Enemigo extends Entidad {
 //Concrete Element
 	
-	public static Icon ic1 = new ImageIcon(Pictures.enemigo1);
 	private boolean cambieDeIA = false;
+	protected float damage;
 
-	public Enemigo(Icon icon) {
-		super(icon);
-		ia = new DummyIA();
+	public Enemigo() {
+		super();
+		ia = new IAMareado();
 		valor = 10;
+		damage = 50;
 		vida = 100;
-		col = new CEnemigo();
+		col = new CEnemigo(damage);
 	}
 
-	
-	public void onRefresh() {
-		cuerpo.mover(ia.ADondeVoy(this));
-		if(getVida()<=50 && !cambieDeIA) {
-			cambieDeIA = true;
-			ia = new FollowIA();
-		}
-	}
-	
-	public void setVida(int v) {
-		vida=v;
+	protected void iniciarGraficamente() {
+		
+		grafico = new Grafico(IconsManager.enemigo);
+		
+		mostrador = new Mostrador(grafico.getIcon());
 	}
 
 	public void aceptar(Colisionador c) {
 		c.afectarEnemigo(this);
 	}
+
+
+	public void colisionasteCon(Entidad another) {
+		another.aceptar(col);
+		
+	}
 	
-	public void disparar() {}
-	
-	public void dropearPW() {
-		/*	 generar un random
-		 *  	si es el numero elegido
-		 *  		crear el pw
-		 *  		agregarlo a la pantalla y a la lista de entidades
-		 */
+	public String getName() {
+		return "Dummy";
+	}
+
+	public void actualizarEntidad() {
+		mover();
 	}
 	
 }

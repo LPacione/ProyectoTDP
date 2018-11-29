@@ -1,34 +1,33 @@
 package Entidades;
 
 
-import javax.swing.Icon;
-
-import Colisionador.*;
-import IA.IABalaEnemigo;
-import IA.IABalaPlayer;
-//import InterfazGrafica.Mostrador;
-//import TiposDeDatos.Coords;
+import Colisionador.CDisparoEnemigo;
+import Colisionador.Colisionador;
+import Datos.IconsManager;
+import InterfazGrafica.Mostrador;
+import Refactoring.IADisparoEnem;
 import TiposDeDatos.CuerpoRigido;
+import TiposDeDatos.Grafico;
 
 public class BalazoEnemigo extends Balazo{
 //Concrete Element - Visitable
 
 	protected float velocidad = 5f;
-	protected int dano; 
 	protected CDisparoEnemigo col;
 
 
-	public BalazoEnemigo(Icon icon) {
-		super(icon);
-		ia = new IABalaEnemigo();
-		dano= 5;
-		vida = 100;
+	public BalazoEnemigo(int dano) {
+		super(dano);
+		ia = new IADisparoEnem();
+		vida = 200;
 		col = new CDisparoEnemigo(dano);
 	}
-
-	public void onRefresh() {
-		cuerpo.mover(ia.ADondeVoy(this).multK(velocidad));
-		vida--;
+	
+	protected void iniciarGraficamente() {
+		
+		grafico = new Grafico(IconsManager.balazoEnemigo);
+		
+		mostrador = new Mostrador(grafico.getIcon());
 	}
 
 	public int getDano() {
@@ -40,18 +39,20 @@ public class BalazoEnemigo extends Balazo{
 	}
 		
 	public void aceptar(Colisionador c) {
-		c.afectarDisparo(this);
+		c.afectarDisparoEnemigo(this);
 	}
 
-	@Override
 	public void colisionasteCon(Entidad another) {
 		another.aceptar(col);	
 	}
-
-	@Override
-	public void disparar() {
-		// TODO Auto-generated method stub
-		
+	
+	public String getName() {
+		return "Bala enemigo";
 	}
+
+	public void actualizarEntidad() {
+		mover();
+	}
+
 
 }

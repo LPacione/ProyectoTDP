@@ -1,29 +1,30 @@
 package Entidades;
 
-import javax.swing.Icon;
-
 import Colisionador.CPowerUp;
 import Colisionador.Colisionador;
+import Refactoring.IANula;
 
 public abstract class PowerUp extends Entidad{
 
 	protected int vida;
 	
-	protected PowerUp(Icon icon) {
-		super(icon);	
+	protected PowerUp() {
+		super();	
 		col = new CPowerUp();
+		ia = new IANula();
 	}
 	
 	public abstract void activar();
-	
-	public abstract void onRefresh();
-
-	public abstract int getDano();
 		
-	public abstract void aceptar(Colisionador c);
+	public void aceptar(Colisionador c) {
+		c.afectarPowerUp(this);
+	}
 
-	public abstract void colisionasteCon(Entidad another) ;
+	public void colisionasteCon(Entidad another) {
+		another.aceptar(col);
+	}
 
-	public abstract void disparar();
-
+	public String getName() {
+		return "PowerUp";
+	}
 }

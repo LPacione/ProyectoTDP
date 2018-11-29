@@ -1,69 +1,66 @@
 package Entidades;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
+import java.util.Random;
 
-import Animation.Pictures;
 import Colisionador.CEnemigoArmado;
-import Colisionador.CEnemigoKami;
 import Colisionador.Colisionador;
-import Datos.GameData;
 import Datos.IconsManager;
-import Entrada.Discreta;
-import IA.ArmadoIA;
-import IA.DummyIA;
-import IA.FollowIA;
-import IA.KamiIA2;
-import Level.AbsNivel;
-import Level.LevelDirector;
+import InterfazGrafica.Mostrador;
+import Level.Nivel;
+import Refactoring.IAArmado;
 import TiposDeDatos.Coords;
-
+import TiposDeDatos.CuerpoRigido;
+import TiposDeDatos.Grafico;
 
 public class EnemigoArmado extends Enemigo{
 //Visitable
-
-public static Icon armadoIcon = new ImageIcon(Pictures.naveArmada);
 	
 	private float velocidad = 2f;
 	private boolean cambieDeIA = false;
-	protected int dano;
+	protected int danoBala;
 	protected CEnemigoArmado col;
 
 	
-	public EnemigoArmado(Icon icon) {
-		super(icon);
-		ia= new ArmadoIA();
+	public EnemigoArmado() {
+		super();
+		ia= new IAArmado();
 		valor=15;
-		dano=1000;
+		damage=1000;
+		danoBala=10;
 		vida = 200;
-		col = new CEnemigoArmado(dano);
-	}
-
-	
-	public void onRefresh() {
-		cuerpo.mover(ia.ADondeVoy(this).multK(velocidad)); 
-		if(getVida()<=50 && !cambieDeIA) {
-			cambieDeIA = true;
-			ia = new FollowIA();
-		}
+		col = new CEnemigoArmado(damage);
 	}
 	
-	public int getDano() {
-		return dano;
+	protected void iniciarGraficamente() {
+		
+		grafico = new Grafico(IconsManager.enemigoArmado);
+		
+		mostrador = new Mostrador(grafico.getIcon());
 	}
 	
 	public void aceptar(Colisionador c) {
 		c.afectarEnemigoArmado(this);
 	}
 
-	public void disparar() {
-		Balazo b = new BalazoEnemigo(IconsManager.balazoEnemigo);
-		b.cuerpo.setPosicion(cuerpo.getPosicion().sumar(new Coords(armadoIcon.getIconWidth()/2- b.getMostrable().getIcon().getIconWidth()/2,40)));
-		AbsNivel n = LevelDirector.instancia().currentLevel();
-		n.addEntity(b);
-		ElConocedor.instancia().add(b);
+	protected void disparar() {
+		Balazo b = new BalazoEnemigo(danoBala);
+		int xBala =(int) grafico.getPosicion().getX();
+		int yBala =(int) grafico.getPosicion().getY();
+		b.getGrafico().setPosicion(xBala,yBala);
+		Nivel n = Nivel.getInstancia();
+		n.agregarEntidad(b);
+		
 	}
 	
+	public void actualizarEntidad() {
+		mover();
+
+		Random rnd = new Random();
+		int numeroAleatorio = rnd.nextInt(100);
+		if(numeroAleatorio==5) {
+			disparar();
+		}
+	}
 	
 	public void colisionasteCon(Entidad another) {
 		another.aceptar(col);	
@@ -71,6 +68,48 @@ public static Icon armadoIcon = new ImageIcon(Pictures.naveArmada);
 	
 	public void setVida(int v) {
 		vida=v;
+	}
+	
+	public void setTiroTriple() {
+		disparar();
+		disparar();
+		disparar();
+	}
+	
+	public void eliminar() {
+		Nivel.getInstancia().eliminarEntidad(this);
+		dropearPowerUp();
+	}
+	
+	public void setSuperMisil() {
+		danoBala=50;
+	}
+	
+	public String getName() {
+		return "Armado";
+	}
+	
+	protected void dropearPowerUp() {
+		Nivel n= Nivel.getInstancia();
+		PowerUp powerUp=null;
+		int nro= new Random().nextInt(2)+1;
+			if(nro==1)
+				powerUp= new SuperMisil();
+			if(nro==2)
+				powerUp= new BombaTemporal();
+			if(nro==3)
+				powerUp= new TiroTriple();
+			if(nro==4)
+				powerUp= new DetenerTiempo();
+			if(nro==5)
+				powerUp=  new SumaVida();
+			if(nro==6)
+				powerUp= new CampoDeProteccion();
+		if(powerUp!=null) {
+			powerUp.cuerpo.setPosicion(cuerpo.getPosicion());
+			n.agregarEntidad(powerUp);
+			
+		}
 	}
 
 }

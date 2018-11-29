@@ -1,30 +1,21 @@
 package InterfazGrafica;
 
-import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.event.KeyListener;
 
-import Datos.*;
-import Entrada.Discreta;
-import Entrada.Teclado;
-import Level.LevelDirector;
-
-import javax.swing.*;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import Datos.GameData;
+import Datos.IconsManager;
+import Refactoring.ControladorPantallas;
+import Refactoring.Pantalla;
+
 public class PantallaL extends Pantalla{
-	private static PantallaL instancia;
-	public static PantallaL getInstance() {
-		instancia = instancia == null ? new PantallaL() : instancia;
-		return instancia;
-	}
 
 
-	private JFrame frame;
-	private Container container;
 
-	private PantallaL() {	
-		inicializar();
+	private PantallaL(ControladorPantallas cp) {	
+		super(cp);
 	}
 
 	protected void inicializar() {
@@ -58,8 +49,9 @@ public class PantallaL extends Pantalla{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		
 	}
+
+
 
 
 }

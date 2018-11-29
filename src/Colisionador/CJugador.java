@@ -1,18 +1,23 @@
 package Colisionador;
 
-import Entidades.*;
+import Entidades.BalazoEnemigo;
+import Entidades.Enemigo;
+import Entidades.EnemigoArmado;
+import Entidades.EnemigoKami;
 
 public class CJugador extends Colisionador{
 	
 	
-	public void afectarDisparo(Balazo balazo) {
-		balazo.setVida(-2);
+	public void afectarDisparoEnemigo(BalazoEnemigo balazo) {
+		balazo.eliminar();
 	}
 	public void afectarEnemigoKami(EnemigoKami ek) {
-		ek.setVida(-500);
+		ek.eliminar();
 	}
-	public void afectarJugador(Player p) {}
-	public void afectarEnemigo(Enemigo e) {}
-	public void afectarObstaculo(Obstaculo o) {}
-	public void afectarEnemigoArmado(EnemigoArmado ea) {}
+	public void afectarEnemigo(Enemigo e) {
+		e.eliminar();
+	}
+	public void afectarEnemigoArmado(EnemigoArmado ea) {
+		ea.eliminar();
+	}
 }
