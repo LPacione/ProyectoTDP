@@ -8,7 +8,9 @@ import Datos.GameData;
 import Entidades.Barricada;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
+import Entidades.EnemigoArmadoEspecial;
 import Entidades.EnemigoKami;
+import Entidades.EnemigoKami2;
 import Entidades.Entidad;
 import Entidades.Obstaculo;
 import Entidades.Player;
@@ -18,8 +20,11 @@ public class Nivel {
 
 	private int cantEnems;
 	private int cantEnemsK;
+	private int cantEnemsK2;
 	private int cantObs;
+	private int cantBarr;
 	private int cantEnemsA;
+	private int cantEnemsAE;
 	private int numeroNivel;
 	protected Collection<Entidad> demasEntidades;
 	private Collection<Entidad> coleccionAEliminar;
@@ -90,37 +95,39 @@ public class Nivel {
 	private void crear(int j) {
 		int ancho = GameData.WindowSize.width;
 
-		if(j<=5) {
-			numeroNivel=j;
-			cantEnems = 3*j;
-			cantEnemsK=3*j;
-			cantObs = 2*j;
-			cantEnemsA= 2*j;
-		}
+		numeroNivel=j;
 
-		//ENEMIGOS 1
-		int cantXNivel= cantEnems/3;
-		int n=0;
-		int nivelAltura=1;
-		for(int i=1; i<=cantEnems ; i++) {
-			Enemigo enem = new Enemigo();
-			demasEntidades.add(enem);
-			Posicion pos = new Posicion(ancho*i/(cantEnems+1),100*nivelAltura);
-			enem.getGrafico().setPosicion(pos.getX(),pos.getY());
-			n++;
-			if(n==cantXNivel) {
-				n=0;
-				nivelAltura++;
-			}
+		if(j==1) {
+			cantEnemsK=2;
+			cantEnemsA=2;
+			cantEnemsK2=2;
+			crearNivel1();
 		}
+		if(j==2) crearNivel2();
+		if(j==3) crearNivel3();
+		if(j==4) crearNivel4();
+		if(j==5) crearNivel5();
+
+	}
+
+	private void crearNivel1() {
 
 		//ENEMIGOS KAMI
 		for(int i=1; i<=cantEnemsK;i++) {
 			EnemigoKami enemK = new EnemigoKami();
 			demasEntidades.add(enemK);
-			Posicion pos = new Posicion(ancho*i/(cantEnemsK+1),350);
+			Posicion pos = new Posicion(200*i,350);
 			enemK.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
+
+		//ENEMIGOS KAMI2
+		for(int i=1; i<=cantEnemsK;i++) {
+			EnemigoKami2 enemK2 = new EnemigoKami2();
+			demasEntidades.add(enemK2);
+			Posicion pos = new Posicion(200*i,350);
+			enemK2.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
 		//ENEMIGOS ARMADOS
 		for(int i=1; i<=cantEnemsA; i++) {
 			EnemigoArmado enemA= new EnemigoArmado();
@@ -128,22 +135,189 @@ public class Nivel {
 			Posicion pos = new Posicion(200*i,50);
 			enemA.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
+
 		//OBSTACULOS
 		for(int i=1; i<=cantObs; i++) {
 			Obstaculo obs = new Obstaculo();
 			demasEntidades.add(obs);
-			Posicion pos = new Posicion(ancho*i/(cantObs+1),200);
+			Posicion pos = new Posicion(300*i,200);
 			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
+
+
+	}
+
+	private void crearNivel2() {
+
+		//ENEMIGO
+		for(int i=1; i<=cantEnems;i++) {
+			Enemigo enem = new Enemigo();
+			demasEntidades.add(enem);
+			Posicion pos = new Posicion(200*i,350);
+			enem.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS KAMI2
+		for(int i=1; i<=cantEnemsK;i++) {
+			EnemigoKami2 enemK2 = new EnemigoKami2();
+			demasEntidades.add(enemK2);
+			Posicion pos = new Posicion(200*i,350);
+			enemK2.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS ARMADOS
+		for(int i=1; i<=cantEnemsA; i++) {
+			EnemigoArmado enemA= new EnemigoArmado();
+			demasEntidades.add(enemA);
+			Posicion pos = new Posicion(200*i,50);
+			enemA.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//OBSTACULOS
+		for(int i=1; i<=cantObs; i++) {
+			Obstaculo obs = new Obstaculo();
+			demasEntidades.add(obs);
+			Posicion pos = new Posicion(300*i,200);
+			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+
+
+	}
+
+	private void crearNivel3() {
+
+		//ENEMIGOS KAMI
+		for(int i=1; i<=cantEnemsK;i++) {
+			EnemigoKami enemK = new EnemigoKami();
+			demasEntidades.add(enemK);
+			Posicion pos = new Posicion(200*i,350);
+			enemK.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS KAMI2
+		for(int i=1; i<=cantEnemsK;i++) {
+			EnemigoKami2 enemK2 = new EnemigoKami2();
+			demasEntidades.add(enemK2);
+			Posicion pos = new Posicion(200*i,350);
+			enemK2.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS ARMADO ESPECIAL
+		for(int i=1; i<=cantEnemsA; i++) {
+			EnemigoArmadoEspecial enemA= new EnemigoArmadoEspecial();
+			demasEntidades.add(enemA);
+			Posicion pos = new Posicion(200*i,50);
+			enemA.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//OBSTACULOS
+		for(int i=1; i<=cantObs; i++) {
+			Obstaculo obs = new Obstaculo();
+			demasEntidades.add(obs);
+			Posicion pos = new Posicion(300*i,200);
+			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+	}
+
+	private void crearNivel4() {
+
+		//ENEMIGO
+		for(int i=1; i<=cantEnems;i++) {
+			Enemigo enem = new Enemigo();
+			demasEntidades.add(enem);
+			Posicion pos = new Posicion(200*i,350);
+			enem.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+
+		//ENEMIGOS ARMADOS
+		for(int i=1; i<=cantEnemsA; i++) {
+			EnemigoArmado enemA= new EnemigoArmado();
+			demasEntidades.add(enemA);
+			Posicion pos = new Posicion(200*i,50);
+			enemA.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS ARMADO ESPECIAL
+		for(int i=1; i<=cantEnemsA; i++) {
+			EnemigoArmadoEspecial enemA= new EnemigoArmadoEspecial();
+			demasEntidades.add(enemA);
+			Posicion pos = new Posicion(200*i,50);
+			enemA.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//OBSTACULOS
+		for(int i=1; i<=cantObs; i++) {
+			Obstaculo obs = new Obstaculo();
+			demasEntidades.add(obs);
+			Posicion pos = new Posicion(300*i,200);
+			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+	}
+
+	private void crearNivel5() {
+
+		//ENEMIGO
+		for(int i=1; i<=cantEnems;i++) {
+			Enemigo enem = new Enemigo();
+			demasEntidades.add(enem);
+			Posicion pos = new Posicion(200*i,350);
+			enem.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+
+		//ENEMIGOS ARMADOS
+		for(int i=1; i<=cantEnemsA; i++) {
+			EnemigoArmado enemA= new EnemigoArmado();
+			demasEntidades.add(enemA);
+			Posicion pos = new Posicion(200*i,50);
+			enemA.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS ARMADO ESPECIAL
+		for(int i=1; i<=cantEnemsA; i++) {
+			EnemigoArmadoEspecial enemA= new EnemigoArmadoEspecial();
+			demasEntidades.add(enemA);
+			Posicion pos = new Posicion(200*i,50);
+			enemA.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS KAMI
+		for(int i=1; i<=cantEnemsK;i++) {
+			EnemigoKami enemK = new EnemigoKami();
+			demasEntidades.add(enemK);
+			Posicion pos = new Posicion(200*i,350);
+			enemK.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//ENEMIGOS KAMI2
+		for(int i=1; i<=cantEnemsK;i++) {
+			EnemigoKami2 enemK2 = new EnemigoKami2();
+			demasEntidades.add(enemK2);
+			Posicion pos = new Posicion(200*i,350);
+			enemK2.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}
+
+		//OBSTACULOS
+		for(int i=1; i<=cantObs; i++) {
+			Obstaculo obs = new Obstaculo();
+			demasEntidades.add(obs);
+			Posicion pos = new Posicion(300*i,200);
+			obs.getGrafico().setPosicion(pos.getX(),pos.getY());
+		}	
+	
+	
 		//BARRICADA
 		for(int i=1; i<=cantObs; i++) {
 			Barricada bar = new Barricada();
 			demasEntidades.add(bar);
-			//					Coords c = new Coords(ancho*i/(cantObs+1),200);
-			//					obs.getCuerpo().setPosicion(c);
-			Posicion pos = new Posicion((ancho*i/(cantObs+1)),150);
+			Posicion pos = new Posicion(250*i,150);
 			bar.getGrafico().setPosicion(pos.getX(),pos.getY());
 		}
+
 	}
 
 	public int getNumeroNivel() {

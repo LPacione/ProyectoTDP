@@ -4,6 +4,7 @@ import Entidades.BalazoEnemigo;
 import Entidades.Barricada;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
+import Entidades.EnemigoArmadoEspecial;
 import Entidades.EnemigoKami;
 import Entidades.Obstaculo;
 import Entidades.Player;
@@ -29,6 +30,9 @@ public class CDisparoPlayer extends Colisionador {
 	}
 	public void afectarEnemigoArmado(EnemigoArmado ea) {
 		ea.setVida(ea.getVida()-damage);
+	}
+	public void afectarEnemigoArmadoEspecial(EnemigoArmadoEspecial eae) {
+		eae.setVida(eae.getVida()-damage);
 	}
 	public void afectarObstaculo(Obstaculo o) {
 		o.setVida(o.getVida()-damage);

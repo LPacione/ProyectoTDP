@@ -5,6 +5,7 @@ import java.util.Random;
 import Colisionador.CEnemigo;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IABuscador;
 import IA.IAMareado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
@@ -16,9 +17,11 @@ public class Enemigo extends Entidad {
 	
 	protected float damage;
 
+	private boolean cambieDeIA = false;
+
 	public Enemigo() {
 		super();
-		ia = new IAMareado();
+		ia = new IABuscador();
 		valor = 10;
 		damage = 50;
 		vida = 100;
@@ -30,6 +33,14 @@ public class Enemigo extends Entidad {
 		grafico = new Grafico(IconsManager.enemigo);
 		
 		mostrador = new Mostrador(grafico.getIcon());
+	}
+	
+	protected void mover() {
+		ia.mover(this);
+		if(getVida()<=50 && !cambieDeIA) {
+			cambieDeIA = true;
+			ia = new IAMareado();
+		}
 	}
 
 	public void aceptar(Colisionador c) {

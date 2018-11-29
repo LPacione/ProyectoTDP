@@ -11,12 +11,14 @@ public class Pictures {
 	public static URL fondoI= Pictures.class.getResource("PantallaInicio.png");
 	public static URL enemigo1 = Pictures.class.getResource("Enemigo1.png");
 	public static URL enemigo2 = Pictures.class.getResource("Enemigo2.png");
+	public static URL enemigo3= Pictures.class.getResource("Enemigo3.png");
 	public static URL obstaculos = Pictures.class.getResource("Obstaculo.png");
 	public static URL barricada = Pictures.class.getResource("Barricada.png");
 	public static URL player = Pictures.class.getResource("Player.png");
 	public static URL powerup = Pictures.class.getResource("PowerUp.png");
 	public static URL balazo = Pictures.class.getResource("fire.gif");
 	public static URL naveArmada= Pictures.class.getResource("NaveArmada.png");
+	public static URL naveArmadaEspecial= Pictures.class.getResource("NaveArmadaEspecial.png");
 	public static URL fireEnemigo= Pictures.class.getResource("fireEnemigo.gif");
 	public static URL vida1= Pictures.class.getResource("Barra de vida 1.png");
 	public static URL vida2= Pictures.class.getResource("Barra de vida 2.png");

@@ -15,7 +15,6 @@ public class EnemigoKami extends Enemigo{
 	
 
 	//private float velocidad = 2f;
-	private boolean cambieDeIA = false;
 	protected int dano;
 	int i = 0;
 	
@@ -35,13 +34,6 @@ public class EnemigoKami extends Enemigo{
 		mostrador = new Mostrador(grafico.getIcon());
 	}
 	
-	protected void mover() {
-		ia.mover(this);
-		if(getVida()<=50 && !cambieDeIA) {
-			cambieDeIA = true;
-			ia = new IABuscador();
-		}
-	}
 	
 	public void aceptar(Colisionador c) {
 		c.afectarEnemigoKami(this);
