@@ -2,7 +2,7 @@ package Entidades;
 
 import Colisionador.CPowerUp;
 import Colisionador.Colisionador;
-import Refactoring.IANula;
+import IA.IANula;
 
 public abstract class PowerUp extends Entidad{
 

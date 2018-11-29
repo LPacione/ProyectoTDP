@@ -5,9 +5,9 @@ import java.util.Random;
 import Colisionador.CEnemigoKami;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IABuscador;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
-import Refactoring.IABuscador;
 import TiposDeDatos.Grafico;
 
 public class EnemigoKami extends Enemigo{

@@ -1,4 +1,4 @@
-package Refactoring;
+package IA;
 
 import java.util.Random;
 

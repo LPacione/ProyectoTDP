@@ -5,9 +5,9 @@ import java.util.Random;
 import Colisionador.CEnemigo;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IAMareado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
-import Refactoring.IAMareado;
 import TiposDeDatos.Grafico;
 
 

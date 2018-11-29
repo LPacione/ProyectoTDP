@@ -4,9 +4,9 @@ import Colisionador.CJugador;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import Entrada.Teclado;
+import IA.IAPlayer;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
-import Refactoring.IAPlayer;
 import TiposDeDatos.Grafico;
 
 public class Player extends Entidad {

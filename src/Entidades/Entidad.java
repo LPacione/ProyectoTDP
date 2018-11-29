@@ -3,9 +3,9 @@ package Entidades;
 import java.util.Random;
 
 import Colisionador.Colisionador;
+import IA.IA;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
-import Refactoring.IA;
 import TiposDeDatos.CuerpoRigido;
 import TiposDeDatos.Grafico;
 

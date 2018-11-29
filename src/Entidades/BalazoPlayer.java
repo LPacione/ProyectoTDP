@@ -4,8 +4,8 @@ package Entidades;
 import Colisionador.CDisparoPlayer;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IADisparoPlayer;
 import InterfazGrafica.Mostrador;
-import Refactoring.IADisparoPlayer;
 import TiposDeDatos.Grafico;
 
 public class BalazoPlayer extends Balazo{

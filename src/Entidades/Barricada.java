@@ -7,8 +7,8 @@ import Animation.Pictures;
 import Colisionador.CBarricada;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IANula;
 import InterfazGrafica.Mostrador;
-import Refactoring.IANula;
 import TiposDeDatos.Grafico;
 
 public class Barricada extends Entidad {

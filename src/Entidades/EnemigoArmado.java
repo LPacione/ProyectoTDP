@@ -5,9 +5,9 @@ import java.util.Random;
 import Colisionador.CEnemigoArmado;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IAArmado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
-import Refactoring.IAArmado;
 import TiposDeDatos.Grafico;
 
 public class EnemigoArmado extends Enemigo{

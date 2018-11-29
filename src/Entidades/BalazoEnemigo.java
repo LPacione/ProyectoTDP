@@ -4,8 +4,8 @@ package Entidades;
 import Colisionador.CDisparoEnemigo;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
+import IA.IADisparoEnem;
 import InterfazGrafica.Mostrador;
-import Refactoring.IADisparoEnem;
 import TiposDeDatos.Grafico;
 
 public class BalazoEnemigo extends Balazo{
