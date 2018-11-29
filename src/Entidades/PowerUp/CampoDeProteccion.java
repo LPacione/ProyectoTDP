@@ -22,8 +22,13 @@ public class CampoDeProteccion extends PowerUp{
 		mostrador = new Mostrador(grafico.getIcon());
 	}
 	public void activar() {
+		System.out.println("Se activo el pw");
+		p.setEscudo(true);
 	}
 	
 	public void actualizarEntidad() {}
 	
+	public String getName() {
+		return "PowerUp Escudo";
+	}
 }

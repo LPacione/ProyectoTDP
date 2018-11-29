@@ -7,7 +7,7 @@ import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import TiposDeDatos.Grafico;
 
-public class DetenerTiempo extends PowerUp{
+public class DetenerTiempo extends PowerUpTemporal{
 
 	protected float velocidad= 1f;
 	protected CPowerUp col;
@@ -25,6 +25,7 @@ public class DetenerTiempo extends PowerUp{
 	}
 
 	public void activar() {
+		System.out.println("Se activo el pw");
 		Nivel n = Nivel.getInstancia();
 		for(Entidad e : n.getEntidades()) {
 			if(e!=p) {
@@ -35,15 +36,9 @@ public class DetenerTiempo extends PowerUp{
 	}
 	
 	public void actualizarEntidad() {
-		if(contador == tiempoMax) {
-			Nivel n = Nivel.getInstancia();
-			for(Entidad e : n.getEntidades()) {
-				if(e!=p) {
-					e.resetearEntidad();
-					mover();
-				}
-			}
-		}
+	}
+	public String getName() {
+		return "PowerUp DetenerTiempo";
 	}
 
 }

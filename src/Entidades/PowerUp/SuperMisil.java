@@ -5,7 +5,7 @@ import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
 import TiposDeDatos.Grafico;
 
-public class SuperMisil extends PowerUp{
+public class SuperMisil extends PowerUpTemporal{
 
 	protected float velocidad = 1f;
 	protected CPowerUp col;
@@ -24,9 +24,14 @@ public class SuperMisil extends PowerUp{
 
 
 	public void activar() {
+		System.out.println("Se activo el pw");
 		p.setSuperMisil();
 	}
 
 	protected void actualizarEntidad() {}
+	
+	public String getName() {
+		return "PowerUp SuperMisil";
+	}
 
 }

@@ -69,9 +69,11 @@ public class Player extends Entidad {
 	
 	public void setTiroTriple() {
 	}
+	public void setTiroDoble() {
+	}
 
 	public void setSuperMisil() {
-		danoBala=50;
+		danoBala=danoBala*5;
 	}
 	
 	public String getName() {

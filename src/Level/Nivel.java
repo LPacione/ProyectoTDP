@@ -88,6 +88,7 @@ public class Nivel {
 			if(e.getVida()<=0) {
 				coleccionAEliminar.add(e);
 				player.sumarPuntaje(e);
+				e.eliminar();
 			}
 		}
 	}

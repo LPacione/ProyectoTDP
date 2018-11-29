@@ -1,8 +1,7 @@
 package Colisionador;
 
 import Entidades.*;
-import Entidades.PowerUp.PowerUp;
-
+import Entidades.PowerUp.*;
 public abstract class Colisionador 
 {
 //Interface Visitor
@@ -18,6 +17,7 @@ public abstract class Colisionador
 	public void afectarDisparoEnemigo(BalazoEnemigo b) {}
 	public void afectarDisparoPlayer(BalazoPlayer b) {}
 	public void afectarPowerUp(PowerUp p) {}
+	public void afectarPowerUpTemporal(PowerUpTemporal p) {}
 	public void afectarEnemigoKami2(EnemigoKami2 enemigoKami2) {}
 	public void afectarEnemigoArmadoEspecial(EnemigoArmadoEspecial enemigoArmadoEspecial) {}
 	public void afectarBarricada(Barricada bar) {}

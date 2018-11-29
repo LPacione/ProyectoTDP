@@ -43,6 +43,7 @@ public abstract class Entidad implements Refrescable {
 	}
 	
 	public void eliminar() {
+		dropearPowerUp();
 		Nivel.getInstancia().eliminarEntidad(this);
 	}
 	
@@ -90,6 +91,6 @@ public abstract class Entidad implements Refrescable {
 	}
 	public void resetearEntidad() {}
 	
-	public void dropearPowerUp() {}
+	protected void dropearPowerUp() {}
 	
 }

@@ -3,6 +3,7 @@ package Entidades.PowerUp;
 import Colisionador.CPowerUp;
 import Datos.IconsManager;
 import InterfazGrafica.Mostrador;
+import Level.Nivel;
 import TiposDeDatos.Grafico;
 
 public class SumaVida extends PowerUp{
@@ -24,12 +25,16 @@ public class SumaVida extends PowerUp{
 	}
 	
 	public void activar() {
-		p.setVida(p.getVida()+50);
+		System.out.println("Se activo el pw");
+		Nivel.getInstancia().getPlayer().setVida(Nivel.getInstancia().getPlayer().getVida()+50);	
 	}
 	
 	public void actualizarEntidad() {
 		mover();
 	}
 	
+	public String getName() {
+		return "PowerUp SumaVida";
+	}
 
 }
