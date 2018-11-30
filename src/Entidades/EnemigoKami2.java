@@ -45,8 +45,6 @@ public class EnemigoKami2 extends Enemigo{
 	}
 	
 	public void colisionasteCon(Entidad another) {
-		if (another instanceof Player) 
-			System.out.println("acaasd");
 		another.aceptar(col);		
 	}
 	

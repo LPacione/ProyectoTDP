@@ -14,7 +14,6 @@ import TiposDeDatos.Grafico;
 public class EnemigoArmadoEspecial extends Enemigo{
 //Visitable
 	
-	//private float velocidad = 2f;
 	protected int danoBala;
 	protected CEnemigoArmadoEspecial col;
 	private boolean cambieDeIA = false;

@@ -8,9 +8,7 @@ import Entidades.EnemigoArmadoEspecial;
 import Entidades.EnemigoKami;
 import Entidades.EnemigoKami2;
 import Entidades.Obstaculo;
-import Entidades.Player;
-import Entidades.PowerUp.PowerUp;
-import Entidades.PowerUp.PowerUpTemporal;
+import PowerUp.PowerUp;
 
 public class CDisparoPlayer extends Colisionador {
 	
@@ -21,9 +19,6 @@ public class CDisparoPlayer extends Colisionador {
 		this.damage = damage;
 	}
 
-	public void afectarJugador(Player p) {
-		//El disparo player no afecta al jugador
-	}
 	public void afectarEnemigo(Enemigo e) {
 		e.setVida(e.getVida()-damage);	
 	}
@@ -48,10 +43,6 @@ public class CDisparoPlayer extends Colisionador {
 	public void afectarPowerUp(PowerUp p) {
 		p.activar();
 		p.eliminar();
-	}
-	public void afectarPowerUpTemporal(PowerUpTemporal pt) {
-		pt.activar();
-		pt.eliminar();
 	}
 	
 	public void afectarBalazoEnemigo(BalazoEnemigo b) {

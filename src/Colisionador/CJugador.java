@@ -1,6 +1,6 @@
 package Colisionador;
 
-import Entidades.BalazoEnemigo;
+import Entidades.Balazo;
 import Entidades.Enemigo;
 import Entidades.EnemigoArmado;
 import Entidades.EnemigoKami;
@@ -9,7 +9,7 @@ public class CJugador extends Colisionador{
 	
 	
 
-	public void afectarDisparoEnemigo(BalazoEnemigo balazo) {
+	public void afectarDisparoEnemigo(Balazo balazo) {
 		balazo.eliminar();
 	}
 	public void afectarEnemigoKami(EnemigoKami ek) {

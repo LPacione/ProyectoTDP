@@ -1,6 +1,7 @@
 package Datos;
 
-import javax.swing.*;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 import Animation.Pictures;
 
@@ -32,4 +33,5 @@ public class IconsManager {
 	public static Icon superMisil= new ImageIcon(Pictures.superMisil);
 	public static Icon tiroTriple= new ImageIcon(Pictures.tiroTriple);
 	public static Icon play= new ImageIcon(Pictures.play);
+	public static Icon bomba = new ImageIcon(Pictures.bomba);
 }

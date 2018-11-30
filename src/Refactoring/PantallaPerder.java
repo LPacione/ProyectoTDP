@@ -51,6 +51,7 @@ public class PantallaPerder extends Pantalla {
 		contador++;
 		if (contador == contadorMax) {
 			cambiarPantalla(new PantallaInicio(cp));
+			Nivel.getInstancia().reiniciarNivel();
 		}
 	}
 

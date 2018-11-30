@@ -1,7 +1,8 @@
 package Entidades;
 
 import Colisionador.Colisionador;
-import IA.*;
+import IA.IA;
+import IA.IACongelado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
 import TiposDeDatos.CuerpoRigido;
@@ -87,10 +88,10 @@ public abstract class Entidad implements Refrescable {
 	}
 	
 	public void pausarEntidad() {
-		ia = new IANula();
+		ia = new IACongelado();
 	}
 	public void resetearEntidad() {}
 	
-	protected void dropearPowerUp() {}
+	public void dropearPowerUp() {}
 	
 }

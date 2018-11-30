@@ -406,4 +406,13 @@ public class Nivel {
 		coleccionAEliminar.add(e);	
 	}
 
+	public void reiniciarNivel() {
+		player = new Player();
+		numeroNivel=1;
+		demasEntidades.removeAll(demasEntidades);
+		coleccionAAgregar.removeAll(coleccionAAgregar);
+		coleccionAEliminar.removeAll(coleccionAEliminar);
+		agregarEntidad(player);
+		crear(numeroNivel);
+	}
 }

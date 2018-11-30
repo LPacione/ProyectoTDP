@@ -10,8 +10,6 @@ import TiposDeDatos.Grafico;
 public class EnemigoKami extends Enemigo{
 //Visitable
 	
-
-	//private float velocidad = 2f;
 	protected int dano;
 	int i = 0;
 	

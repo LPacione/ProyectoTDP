@@ -53,6 +53,7 @@ public class PantallaGanar extends Pantalla {
 		contador++;
 		if (contador == contadorMax) {
 			cambiarPantalla(new PantallaInicio(cp));
+			Nivel.getInstancia().reiniciarNivel();
 		}
 	}
 

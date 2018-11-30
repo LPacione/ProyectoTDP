@@ -5,18 +5,17 @@ import java.util.Random;
 import Colisionador.CEnemigo;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
-import Entidades.PowerUp.CampoDeProteccion;
-import Entidades.PowerUp.DetenerTiempo;
-import Entidades.PowerUp.PowerUp;
-import Entidades.PowerUp.PowerUpTemporal;
-import Entidades.PowerUp.SumaVida;
-import Entidades.PowerUp.SuperMisil;
-import Entidades.PowerUp.TiroDoble;
-import Entidades.PowerUp.TiroTriple;
 import IA.IABuscador;
 import IA.IAMareado;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
+import PowerUp.CampoDeProteccion;
+import PowerUp.DetenerTiempo;
+import PowerUp.PowerUp;
+import PowerUp.SumaVida;
+import PowerUp.SuperMisil;
+import PowerUp.TiroDoble;
+import PowerUp.TiroTriple;
 import TiposDeDatos.Grafico;
 
 
@@ -33,7 +32,7 @@ public class Enemigo extends Entidad {
 		valor = 10;
 		damage = 50;
 		vida = 100;
-		col = new CEnemigo(damage);
+		col = new CEnemigo(damage,this);
 	}
 
 	protected void iniciarGraficamente() {
@@ -72,33 +71,28 @@ public class Enemigo extends Entidad {
 		ia = new IABuscador();
 	}
 
-	protected void dropearPowerUp() {
+	public void dropearPowerUp() {
 		Nivel n= Nivel.getInstancia();
-		PowerUp powerUp=null;
-		PowerUpTemporal powerUpT = null;
-		int nro= new Random().nextInt(8)+1;
-		if(nro==5)
-			powerUp=  new SumaVida();
-		if(nro==6)
-			powerUp= new CampoDeProteccion();
-		if(nro==2)
-			powerUp= new TiroDoble();
-		if(nro==3)
-			powerUp= new TiroTriple();
-		if(nro==4)
-			powerUpT= new DetenerTiempo();
+		PowerUp powerUp= null;
+		int nro= new Random().nextInt(10);
+
 		if(nro==1)
-			powerUpT= new SuperMisil();
+			powerUp=  new SumaVida();
+		if(nro==2)
+			powerUp= new CampoDeProteccion();
+		if(nro==3)
+			powerUp= new TiroDoble();
+		if(nro==4)
+			powerUp= new TiroTriple();
+		if(nro==5)
+			powerUp= new DetenerTiempo();
+		if(nro==6)
+			powerUp= new SuperMisil();
 
 		if(powerUp!=null) {
 			System.out.println(powerUp.getName());
 			powerUp.getGrafico().setPosicion(this.getGrafico().getPosicion().getX(), this.getGrafico().getPosicion().getY());
 			n.agregarEntidad(powerUp);
-		}
-		if(powerUpT!=null) {
-			System.out.println(powerUpT.getName());
-			powerUpT.getGrafico().setPosicion(this.getGrafico().getPosicion().getX(), this.getGrafico().getPosicion().getY());
-			n.agregarEntidad(powerUpT);
 		}
 	}
 

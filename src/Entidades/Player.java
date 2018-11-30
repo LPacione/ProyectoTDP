@@ -4,6 +4,8 @@ import Colisionador.CJugador;
 import Colisionador.Colisionador;
 import Datos.IconsManager;
 import Entrada.Teclado;
+import EstadosJugador.EstadoComun;
+import EstadosJugador.State;
 import IA.IAPlayer;
 import InterfazGrafica.Mostrador;
 import Level.Nivel;
@@ -11,10 +13,9 @@ import TiposDeDatos.Grafico;
 
 public class Player extends Entidad {
 	//Visitable
-
 	private int puntaje;
 	private int danoBala;
-	private boolean escudo;
+	private State state;
 
 	public Player() {
 		super();
@@ -22,8 +23,8 @@ public class Player extends Entidad {
 		ia = new IAPlayer();
 		vida = 100;
 		col  = new CJugador();
-		danoBala=20;
-		setEscudo(false);
+		danoBala=30;
+		state = new EstadoComun(this);
 	}
 	
 	protected void iniciarGraficamente() {
@@ -34,21 +35,10 @@ public class Player extends Entidad {
 		
 		grafico.setPosicion(400, 500);
 	}
-	
-	private void disparar() {
-		if(Teclado.getInstancia().espacio()) {
-			Nivel n = Nivel.getInstancia();
-			Balazo b = new BalazoPlayer(danoBala);
-			int xBala =(int) grafico.getPosicion().getX();
-			int yBala =(int) grafico.getPosicion().getY();
-			b.getGrafico().setPosicion(xBala,yBala);
-			n.agregarEntidad(b);
-		}
-	}
 
 	public void actualizarEntidad() {
 		mover();
-		disparar();
+		state.disparar();
 	}
 
 	public void sumarPuntaje(Entidad e) {
@@ -67,24 +57,67 @@ public class Player extends Entidad {
 		another.aceptar(col);		
 	}
 	
-	public void setTiroTriple() {
+	public void setEstado(State s) {
+		state = s;
 	}
-	public void setTiroDoble() {
-	}
-
-	public void setSuperMisil() {
-		danoBala=danoBala*5;
+	public State getEstado() {
+		return state;
 	}
 	
 	public String getName() {
 		return "Player";
 	}
-
-	public boolean getEscudo() {
-		return escudo;
+	
+	
+	public void disparar() {
+		if(Teclado.getInstancia().espacio()) {
+			Nivel n = Nivel.getInstancia();
+			Balazo b = new BalazoPlayer(danoBala);
+			int xBala =(int) grafico.getPosicion().getX();
+			int yBala =(int) grafico.getPosicion().getY();
+			b.getGrafico().setPosicion(xBala,yBala);
+			n.agregarEntidad(b);
+		}
 	}
-
-	public void setEscudo(boolean escudo) {
-		this.escudo = escudo;
+	
+	public void crearDisparoDoble() {
+		if(Teclado.getInstancia().espacio()) {
+			Nivel n = Nivel.getInstancia();
+			Balazo b1 = new BalazoPlayer(danoBala);
+			Balazo b2 = new BalazoPlayer(danoBala);
+			int xBala =(int) grafico.getPosicion().getX();
+			int yBala =(int) grafico.getPosicion().getY();
+			b1.getGrafico().setPosicion(xBala,yBala);
+			b2.getGrafico().setPosicion(xBala+10,yBala);
+			n.agregarEntidad(b1);
+			n.agregarEntidad(b2);
+		}
+	}
+	public void crearDisparoTriple() {
+		if(Teclado.getInstancia().espacio()) {
+			Nivel n = Nivel.getInstancia();
+			Balazo b1 = new BalazoPlayer(danoBala);
+			Balazo b2 = new BalazoPlayer(danoBala);
+			Balazo b3 = new BalazoPlayer(danoBala);
+			int xBala =(int) grafico.getPosicion().getX();
+			int yBala =(int) grafico.getPosicion().getY();
+			b1.getGrafico().setPosicion(xBala,yBala);
+			b2.getGrafico().setPosicion(xBala+10,yBala);
+			b3.getGrafico().setPosicion(xBala+20,yBala);
+			n.agregarEntidad(b1);
+			n.agregarEntidad(b2);
+			n.agregarEntidad(b3);
+		}
+	}
+	
+	public void disparoSuperMisil() {
+		if(Teclado.getInstancia().espacio()) {
+			Nivel n = Nivel.getInstancia();
+			Bomba b = new Bomba(danoBala*100);
+			int xBala =(int) grafico.getPosicion().getX();
+			int yBala =(int) grafico.getPosicion().getY();
+			b.getGrafico().setPosicion(xBala,yBala);
+			n.agregarEntidad(b);
+		}
 	}
 }

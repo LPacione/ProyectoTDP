@@ -1,7 +1,6 @@
 package Colisionador;
 
-import Entidades.BalazoEnemigo;
-import Entidades.BalazoPlayer;
+import Entidades.Balazo;
 import Entidades.Obstaculo;
 import Entidades.Player;
 
@@ -18,11 +17,11 @@ public class CEnemigoKami extends Colisionador {
 		p.setVida(p.getVida()-damage);
 	}
 	
-	public void afectarDisparoPlayer(BalazoPlayer balazo) {
+	public void afectarDisparoPlayer(Balazo balazo) {
 		balazo.eliminar();
 	}
 	
-	public void afectarBalazoEnemigo(BalazoEnemigo b) {
+	public void afectarBalazoEnemigo(Balazo b) {
 		b.eliminar();
 	}
 	
